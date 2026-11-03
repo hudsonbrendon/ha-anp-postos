@@ -7,7 +7,6 @@ from typing import Any
 import aiohttp
 from homeassistant.config_entries import ConfigEntry, ConfigFlow, ConfigFlowResult, OptionsFlow
 from homeassistant.core import callback
-from homeassistant.helpers.aiohttp_client import async_create_clientsession
 from homeassistant.helpers.selector import (
     BooleanSelector,
     NumberSelector,
@@ -34,12 +33,10 @@ from .const import (
 )
 
 
-async def _cities(hass) -> dict[str, str]:
-    session = async_create_clientsession(hass, cookie_jar=aiohttp.CookieJar())
-    try:
+async def _fetch_cities() -> dict[str, str]:
+    # Sessão curta e isolada: o cookie APEX não pode vazar para a sessão do HA.
+    async with aiohttp.ClientSession(cookie_jar=aiohttp.CookieJar()) as session:
         return await AnpPostosClient(session).async_get_cities()
-    finally:
-        await session.close()
 
 
 def _schema(hass, cities: dict[str, str], current: dict[str, Any]) -> vol.Schema:
@@ -90,7 +87,7 @@ class AnpPostosConfigFlow(ConfigFlow, domain=DOMAIN):
         errors: dict[str, str] = {}
         if not getattr(self, "_cities", None):
             try:
-                self._cities = await _cities(self.hass)
+                self._cities = await _fetch_cities()
             except AnpError:
                 return self.async_abort(reason="cannot_connect")
         if user_input is not None:
@@ -120,7 +117,7 @@ class AnpPostosOptionsFlow(OptionsFlow):
     async def async_step_init(self, user_input: dict[str, Any] | None = None) -> ConfigFlowResult:
         if self._cities is None:
             try:
-                self._cities = await _cities(self.hass)
+                self._cities = await _fetch_cities()
             except AnpError:
                 return self.async_abort(reason="cannot_connect")
         errors: dict[str, str] = {}

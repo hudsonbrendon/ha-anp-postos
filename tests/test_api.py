@@ -47,7 +47,7 @@ def test_details():
     assert {"fiscalizacoes", "amostras", "posto-detalhe", "origem-combustivel", "nota"} <= set(links)
     grids = {a: list(api.parse_grids(page(a)).values()) for a in ("fiscalizacoes", "amostras", "posto-detalhe")}
     d = api.build_details(grids, api.parse_table(page("origem-combustivel")))
-    assert d["fiscalizacoes"][0] == {"df": "704646", "data": "17/4/2026", "orgao": "ANP", "infracao": "Não"}
+    assert d["fiscalizacoes"][0] == {"df": "704646", "data": "17/4/2026", "convenio": "ANP", "de_campo": "Não"}
     assert d["irregularidades"][0]["descricao"].startswith("Amostra Prova de Óleo Diesel S 10")
     assert len(d["amostras"]) == 15
     assert d["ensaios_nao_conformes"][0]["ensaio"] == "Teor de Etanol"

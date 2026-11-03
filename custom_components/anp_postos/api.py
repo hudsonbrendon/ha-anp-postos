@@ -197,7 +197,8 @@ def normalize_station(row: dict[str, Any], meta: dict[str, Any] | None = None) -
         "cnpj": text("CNPJ"),
         "cnpj_formatado": text("CNPJ_TXT"),
         "razao_social": text("RAZAO_SOCIAL"),
-        "nome": text("NOME"),
+        # A ANP preenche nome vazio com este aviso; trata como sem nome fantasia.
+        "nome": None if "não cadastrado" in (text("NOME") or "") else text("NOME"),
         "distribuidora": text("DISTRIBUIDORA"),
         "distribuidora_desde": parse_date(row.get("DISTRIBUIDORA_DATA_INICIO")),
         "volume_outras_distribuidoras_pct": parse_number(
@@ -260,7 +261,7 @@ def build_details(
     fisc = grids.get("fiscalizacoes") or []
     if fisc:
         details["fiscalizacoes"] = [
-            {"df": _nth(r, 0), "data": _nth(r, 1), "orgao": _nth(r, 2), "infracao": _nth(r, 3)}
+            {"df": _nth(r, 0), "data": _nth(r, 1), "convenio": _nth(r, 2), "de_campo": _nth(r, 3)}
             for r in fisc[0]["rows"]
         ]
     if len(fisc) > 1:

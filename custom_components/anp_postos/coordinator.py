@@ -7,7 +7,6 @@ from typing import TYPE_CHECKING, Any
 
 import aiohttp
 from homeassistant.components import persistent_notification
-from homeassistant.helpers.aiohttp_client import async_create_clientsession
 from homeassistant.helpers.storage import Store
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator, UpdateFailed
 
@@ -59,50 +58,72 @@ class AnpPostosCoordinator(DataUpdateCoordinator[dict[str, dict[str, Any]]]):
                 hours=entry_option(entry, CONF_SCAN_HOURS, DEFAULT_SCAN_HOURS)
             ),
         )
-        # Cookie jar próprio: a sessão APEX vive no cookie ORA_WWV_APP_204.
-        self._session = async_create_clientsession(hass, cookie_jar=aiohttp.CookieJar())
         self._store: Store[dict[str, int | None]] = Store(
             hass, 1, f"{DOMAIN}.{entry.entry_id}.notified"
         )
         self._notified: dict[str, int | None] | None = None
-
-    async def async_close(self) -> None:
-        await self._session.close()
 
     @property
     def max_nota(self) -> int:
         return int(entry_option(self.config_entry, CONF_MAX_NOTA, DEFAULT_MAX_NOTA))
 
     async def _async_update_data(self) -> dict[str, dict[str, Any]]:
+        """Só a lista de postos (3 requisições por cidade). Detalhes vão em background."""
         cities: dict[str, str] = entry_option(self.config_entry, CONF_CITIES, {})
-        fetch_details = entry_option(self.config_entry, CONF_DETAILS, DEFAULT_DETAILS)
         data: dict[str, dict[str, Any]] = {}
         for city_id, city_name in cities.items():
-            # Sessão nova por cidade: as URLs assinadas dos detalhes valem só nela.
-            self._session.cookie_jar.clear()
-            client = AnpPostosClient(self._session)
             try:
-                stations = await client.async_get_stations(city_id)
+                stations = await self._async_fetch_city(city_id, details=False)
             except AnpError as err:
                 if self.data and city_id in self.data:
                     LOGGER.warning("%s: mantendo dados anteriores (%s)", city_name, err)
                     data[city_id] = self.data[city_id]
                     continue
                 raise UpdateFailed(f"{city_name}: {err}") from err
+            previous = (self.data or {}).get(city_id, {}).get("stations", {})
+            for cod, station in stations.items():
+                # Mantém os detalhes do ciclo anterior até o background trazer os novos.
+                if "detalhes" in previous.get(cod, {}):
+                    station["detalhes"] = previous[cod]["detalhes"]
+            data[city_id] = {"name": city_name, "stations": stations}
+        if entry_option(self.config_entry, CONF_DETAILS, DEFAULT_DETAILS):
+            self.config_entry.async_create_background_task(
+                self.hass, self._async_enrich(data), f"{DOMAIN} detalhes"
+            )
+        else:
+            await self._async_notify(data)
+        return data
+
+    async def _async_fetch_city(self, city_id: str, details: bool) -> dict[str, dict[str, Any]]:
+        # Sessão nova por cidade: a sessão APEX vive no cookie ORA_WWV_APP_204 e
+        # as URLs assinadas dos detalhes só valem nela.
+        async with aiohttp.ClientSession(cookie_jar=aiohttp.CookieJar()) as session:
+            client = AnpPostosClient(session)
+            stations = await client.async_get_stations(city_id)
             for station in stations:
                 station["irregular"] = is_irregular(station, self.max_nota)
                 station["cidade_id"] = city_id
-                if station["irregular"] and fetch_details:
+                if details and station["irregular"]:
                     try:
                         station["detalhes"] = await client.async_get_details(station)
                     except AnpError as err:
                         LOGGER.debug("detalhes de %s: %s", station["cnpj"], err)
-            data[city_id] = {
-                "name": city_name,
-                "stations": {s["cod_instalacao"]: s for s in stations if s["cod_instalacao"]},
-            }
+        return {s["cod_instalacao"]: s for s in stations if s["cod_instalacao"]}
+
+    async def _async_enrich(self, data: dict[str, dict[str, Any]]) -> None:
+        """Fiscalizações/amostras/origem dos irregulares, depois o aviso."""
+        for city_id, city in data.items():
+            try:
+                fresh = await self._async_fetch_city(city_id, details=True)
+            except AnpError as err:
+                LOGGER.warning("%s: detalhes indisponíveis (%s)", city["name"], err)
+                continue
+            for cod, station in fresh.items():
+                if cod in city["stations"] and "detalhes" in station:
+                    city["stations"][cod]["detalhes"] = station["detalhes"]
         await self._async_notify(data)
-        return data
+        if self.data is data:
+            self.async_update_listeners()
 
     async def _async_notify(self, data: dict[str, dict[str, Any]]) -> None:
         """Avisa postos que viraram irregulares (ou pioraram a nota) desde o último aviso."""

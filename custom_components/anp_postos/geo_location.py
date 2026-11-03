@@ -50,7 +50,7 @@ class AnpPostoGeolocation(AnpPostosEntity, GeolocationEvent):
     """Posto no mapa; estado = distância de casa (km)."""
 
     _attr_source = DOMAIN
-    _attr_has_entity_name = False  # nome = nome do posto, sem prefixo da cidade
+    _attr_has_entity_name = False
     _attr_unit_of_measurement = UnitOfLength.KILOMETERS
     _attr_icon = "mdi:gas-station"
     _unrecorded_attributes = frozenset(
@@ -59,6 +59,9 @@ class AnpPostoGeolocation(AnpPostosEntity, GeolocationEvent):
 
     def __init__(self, coordinator, city_id: str, cod: str) -> None:
         super().__init__(coordinator, city_id)
+        # Fora do dispositivo da cidade: o HA 2026 prefixa o nome do dispositivo
+        # e o mapa mostraria "Postos NATAL - RN POSTO X".
+        self._attr_device_info = None
         self.cod = cod
         self._attr_unique_id = cod
 
