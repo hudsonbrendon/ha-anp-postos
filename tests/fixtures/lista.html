@@ -1,0 +1,2935 @@
+<!DOCTYPE html>
+<html class="no-js  page-5 app-ANPCOMVCPOSTOS" lang="pt-br" >
+<head>
+  <meta http-equiv="x-ua-compatible" content="IE=edge" />
+  <meta charset="utf-8">
+  <title>Lista de Postos</title>
+  <base href="/ordsdw/" />
+<link rel="stylesheet" href="/apex24_2/libraries/oraclejet/17.0.2/css/libs/oj/17.0.2/redwood/oj-redwood-notag-min.css?v=24.2.13" type="text/css" />
+<link rel="stylesheet" href="/apex24_2/app_ui/css/Core.min.css?v=24.2.13" type="text/css" />
+<link rel="stylesheet" href="/apex24_2/app_ui/css/Theme-Standard.min.css?v=24.2.13" type="text/css" />
+
+  <link rel="stylesheet" href="/apex24_2/libraries/font-apex/2.4/css/font-apex.min.css?v=24.2.13" type="text/css" />
+<link rel="stylesheet" href="/apex24_2/themes/theme_42/24.2/css/Core.min.css?v=24.2.13" type="text/css" />
+
+  
+  <link rel="stylesheet" href="/apex24_2/themes/theme_42/24.2/css/Vita.min.css?v=24.2.13" type="text/css" />
+
+  <link rel="stylesheet" href="r/sfi_apex/204/files/static/v186/style/styleANP.min.css" type="text/css" />
+
+  
+  <link rel="apple-touch-icon" href="r/sfi_apex/204/files/static/v186/icons/app-icon-192.png" /><link rel="icon" href="r/sfi_apex/204/files/static/v186/icons/app-icon-32.png" />
+  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Pragma" content="no-cache" /><meta http-equiv="Expires" content="-1" /><meta http-equiv="Cache-Control" content="no-cache" /><meta name="theme-color" content="&#x23;000000" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-title" content="ANP&#x20;Com&#x20;Vc&#x20;-&#x20;Postos" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<link rel="manifest" href="&#x2F;ordsdw&#x2F;r&#x2F;sfi_apex&#x2F;anpcomvcpostos&#x2F;manifest.json&#x3F;v&#x3D;24.2.13-6129336796412&#x26;lang&#x3D;pt-br" crossorigin="use-credentials" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script type="text/javascript" src="/ordsdw/ruxitagentjs_ICA7NVfhqrux_10347260902154543.js" data-dtconfig="app=7516bd696518e5ba|srtbv=4|owasp=1|featureHash=ICA7NVfhqrux|rdnt=1|uxrgce=1|cuc=prax6tz7|mel=100000|expw=1|dpvc=1|md=mdcc1=aa#lnkUsuarioSistema@title|lastModification=1792176564092|postfix=prax6tz7|tp=500,50,0|srbbv=3|agentUri=/ordsdw/ruxitagentjs_ICA7NVfhqrux_10347260902154543.js|reportUrl=/ordsdw/rb_bf46627rfv|rid=RID_2064169332|rpid=-1065997098|domain=anp.gov.br"></script></head>
+<body class="t-PageBody t-PageBody--hideLeft t-PageBody--hideActions no-anim t-PageTemplate--standard   apex-top-nav apex-icons-fontapex apex-theme-vita"   id="t_PageBody">
+<a href="#main" id="t_Body_skipToContent">Ir para Conte&#xFA;do Principal</a>
+<form role="none" action="wwv_flow.accept?p_context=anpcomvcpostos/postos-lista/5393182298754" method="post" name="wwv_flow" id="wwvFlowForm" data-oj-binding-provider="none" novalidate  autocomplete="off">
+<input type="hidden" name="p_flow_id" value="204" id="pFlowId" /><input type="hidden" name="p_flow_step_id" value="5" id="pFlowStepId" /><input type="hidden" name="p_instance" value="5393182298754" id="pInstance" /><input type="hidden" name="p_page_submission_id" value="MjM5MDM0OTc5NzIxNjM5OTczNjE2MzU3MzM3MTY4OTgxNTg5MTA3&#x2F;dGRfoWBGg6AlcXg7QlmfyE7eQqECxnr5Yf9cyaY7nbdGYz9L5mseQD22IyvaYnt32niQOJ0fZ5mOsJ4PfBZE8w" id="pPageSubmissionId" /><input type="hidden" name="p_request" value="" id="pRequest" /><input type="hidden" name="p_reload_on_submit" value="S" id="pReloadOnSubmit" /><input type="hidden" value="anpcomvcpostos&#x2F;postos-lista&#x2F;5393182298754" id="pContext" /><input type="hidden" value="239034979721639973616357337168981589107" id="pSalt" />
+<header class="t-Header" id="t_Header" role="banner">
+  
+        <!-- <div id="barraGoverno"> </div> -->
+        <div id="logoSistema">
+            <a href="&#x2F;ordsdw&#x2F;r&#x2F;sfi_apex&#x2F;anpcomvcpostos&#x2F;home?session=5393182298754" class="t-Header-logo-link"><div id="logoSistema">
+    <img src="r/sfi_apex/204/files/static/v186/icons/app-icon-32.png" />
+    <span class="tituloSistema">ANP Com Vc - Postos</span>
+</div></a>
+         </div>
+        <div id="barraAzul"> </div>
+<div class="t-Header-nav u-pullLeft"><ul class="t-NavigationBar " id="35877735121037570"><li class="t-NavigationBar-item ">
+  <a class="t-Button t-Button--icon t-Button--header t-Button--navBar" href="/ordsdw/r/sfi_apex/anpcomvcpostos/home?session=5393182298754" title="" target="" data-otel-label="">
+    <span class="t-Icon fa&#x20;fa-home" aria-hidden="true" ></span><span class="t-Button-label">Home</span><span class="t-Button-badge"></span>
+  </a>
+</li><li class="t-NavigationBar-item ">
+  <a class="t-Button t-Button--icon t-Button--header t-Button--navBar" href="/ordsdw/r/sfi_apex/anpcomvcpostos/informacoes?session=5393182298754" title="" target="" data-otel-label="">
+    <span class="t-Icon fa&#x20;fa-info-circle-o" aria-hidden="true" ></span><span class="t-Button-label">Informa&#xE7;&#xF5;es do aplicativo</span><span class="t-Button-badge"></span>
+  </a>
+</li></ul></div>
+<div class="t-Header-navBar--center u-pullRight"><ul class="t-NavigationBar " id="35878817749037608"></ul></div>
+</header>
+ <div class="t-Body">
+  
+  <div class="t-Body-main">
+    <div class="t-Body-title" id="t_Body_title"></div>
+    <div class="t-Body-content" id="t_Body_content">
+      <main id="main" class="t-Body-mainContent">
+        <span id="APEX_SUCCESS_MESSAGE" data-template-id="36670989369316331_S" class="apex-page-success u-hidden"></span><span id="APEX_ERROR_MESSAGE" data-template-id="36670989369316331_E" class="apex-page-error u-hidden"></span>
+        <div class="t-Body-fullContent"></div>
+        <div class="t-Body-contentInner"><div class="container">
+<div class="row ">
+<div class="col col-12 apex-col-auto col-start col-end" ><div class="t-ContentBlock titulo paginas  t-ContentBlock--h1" id="R38277121065099102"  role="region" aria-labelledby="R38277121065099102_heading" >
+  <div class="t-ContentBlock-header">
+    <div class="t-ContentBlock-headerItems t-ContentBlock-headerItems--title">
+      <span class="t-ContentBlock-headerIcon"><span class="t-Icon " aria-hidden="true"></span></span>
+      <h2 class="t-ContentBlock-title" id="R38277121065099102_heading" data-apex-heading>Selecione o Posto na lista</h2>
+      
+    </div>
+    <div class="t-ContentBlock-headerItems t-ContentBlock-headerItems--buttons"></div>
+  </div>
+  <div class="t-ContentBlock-body"></div>
+  <div class="t-ContentBlock-buttons"></div>
+</div>
+</div>
+</div><div class="row ">
+<div class="col col-12 apex-col-auto tabelaDupla col-start col-end" ><div class="t-ContentBlock t-ContentBlock--h1 t-Region--removeHeader js-removeLandmark" id="R38277306105099103"  role="region" aria-labelledby="R38277306105099103_heading" >
+  <div class="t-ContentBlock-header">
+    <div class="t-ContentBlock-headerItems t-ContentBlock-headerItems--title">
+      <span class="t-ContentBlock-headerIcon"><span class="t-Icon " aria-hidden="true"></span></span>
+      <h2 class="t-ContentBlock-title" id="R38277306105099103_heading" data-apex-heading>Postos_Lista</h2>
+      
+    </div>
+    <div class="t-ContentBlock-headerItems t-ContentBlock-headerItems--buttons"></div>
+  </div>
+  <div class="t-ContentBlock-body"><h2 class="label">Filtrar Registros</h2><div id="R38277306105099103_ig">
+<div class="a-GV-columnItemContainer u-vh" aria-hidden="true">
+<div class="a-GV-columnItem"><input type="hidden" id="C38277415647099105"></div>
+<div class="a-GV-columnItem"><input type="hidden" id="C41660231121519328"></div>
+<div class="a-GV-columnItem"><input type="hidden" id="C38277703060099107"></div>
+<div class="a-GV-columnItem"><input type="hidden" id="C38277760994099108"></div>
+<div class="a-GV-columnItem"><input type="hidden" id="C38277859719099109"></div>
+<div class="a-GV-columnItem"><input type="hidden" id="C38278524423099116"></div>
+<div class="a-GV-columnItem"><input type="hidden" id="C38278666076099117"></div>
+<div class="a-GV-columnItem"><input type="hidden" id="C38279636336099127"></div>
+<div class="a-GV-columnItem"><input type="hidden" id="C38279782394099128"></div>
+<div class="a-GV-columnItem"><input type="hidden" id="C38279179916099122"></div>
+<div class="a-GV-columnItem"><input type="hidden" id="C38302232574501188"></div>
+<div class="a-GV-columnItem"><input type="hidden" id="C38279090021099121"></div>
+<div class="a-GV-columnItem"><input type="hidden" id="C26535246242731565"></div>
+<div class="a-GV-columnItem"><input type="hidden" id="C38277943993099110"></div>
+<div class="a-GV-columnItem"><input type="hidden" id="C38278070984099111"></div>
+<div class="a-GV-columnItem"><input type="hidden" id="C38278169444099112"></div>
+<div class="a-GV-columnItem"><input type="hidden" id="C38278482277099115"></div>
+<div class="a-GV-columnItem"><input type="hidden" id="C38278284482099113"></div>
+<div class="a-GV-columnItem"><input type="hidden" id="C38278322471099114"></div>
+<div class="a-GV-columnItem"><input type="hidden" id="C38279466771099125"></div>
+<div class="a-GV-columnItem"><input type="hidden" id="C38279600348099126"></div>
+<div class="a-GV-columnItem"><input type="hidden" id="C38277590133099106"></div>
+<div class="a-GV-columnItem"><input type="hidden" id="C38278969798099120"></div>
+<div class="a-GV-columnItem"><input type="hidden" id="C38279358472099124"></div>
+<div class="a-GV-columnItem"><input type="hidden" id="C38279308665099123"></div>
+<div class="a-GV-columnItem"><input type="hidden" id="C38278766163099118"></div>
+<div class="a-GV-columnItem"><input type="hidden" id="C38278897752099119"></div>
+<div class="a-GV-columnItem"><input type="hidden" id="C38279889676099129"></div>
+<div class="a-GV-columnItem"><input type="hidden" id="C38279945828099130"></div>
+<div class="a-GV-columnItem"><input type="hidden" id="C38280046066099131"></div>
+<div class="a-GV-columnItem"><input type="hidden" id="C38280137211099132"></div>
+<div class="a-GV-columnItem"><input type="hidden" id="C38280283774099133"></div>
+<div class="a-GV-columnItem"><input type="hidden" id="C38280340011099134"></div>
+<div class="a-GV-columnItem"><input type="hidden" id="C38301963897501185"></div>
+<div class="a-GV-columnItem"><input type="hidden" id="C38302076351501186"></div>
+<div class="a-GV-columnItem"><input type="hidden" id="C38302123476501187"></div>
+<div class="a-GV-columnItem"><input type="hidden" id="C38302416878501190"></div>
+<div class="a-GV-columnItem"><input type="hidden" id="C41659964901519325"></div>
+<div class="a-GV-columnItem"><input type="hidden" id="C41660053719519326"></div>
+<div class="a-GV-columnItem"><input type="hidden" id="C41660151642519327"></div>
+<div class="a-GV-columnItem"><input type="hidden" id="C22249893381107590"></div>
+<div class="a-GV-columnItem"><input type="hidden" id="C22250043494107591"></div>
+</div>
+</div>
+<script nonce="BNhTrLLNiZmfNNSXrJduNQ">
+var gIg38277306105099103data = {
+"values":[
+[
+"241688"
+,"24230106000140"
+,"24.230.106\/0001-40"
+,"M M COMERCIAL DE COMBUSTIVEIS PLANALTO LTDA"
+,"REDE DE POSTOS DOMINGOS"
+,"SETTA COMBUSTIVEIS LTDA"
+,"29\/11\/2023"
+,"5,043"
+,"Recebeu 5,043% de outras distribuidoras"
+,"POSTO REVENDEDOR"
+,""
+,"EM OPERA\u00C7\u00C3O"
+,"EM OPERA\u00C7\u00C3O"
+,"AVENIDA BACHAREL TOMAZ LANDIM,3540"
+,"BR 101"
+,"IGAPO"
+,"59106120"
+,"NATAL"
+,"RN"
+,"-05,76872790"
+,"-35,27157240"
+,"PR\/RN0181619"
+,"ANP N\u00BA 703"
+,"RESOLU\u00C7\u00C3O ANP N\u00B0 41\/2013"
+,"48610006885201755"
+,"26\/6\/2017"
+,"30\/6\/2017"
+,"8"
+,"8"
+,"0"
+,"0"
+,"0"
+,"0"
+,"9"
+,"1"
+,"8"
+,"159"
+,"-5,7687279"
+,"-35,2715724"
+,"5"
+,""
+,"9"
+,{
+"salt":"bByiNy9GUXyCtYm1vJiTeg"
+,"protected":"\/j-ew6oscE09F2IH7hxrKvUq5CmF_UMSTW0BwVq16fUQAtfedl-_XMSxykNhbv6T1S_So7w-1BxY2R1aw1AT0sg"
+,"rowVersion":"6TLs3yddfY3Lg8wAjRBnS7nYztEhmxeR_UDYX5hpVAK4qgxWhJaDmHwhgZQ2ILJwPfgzPxr9CTYxgQFjepFz2w"
+,"fields":{
+"CNPJ":{
+"url":"\/ordsdw\/r\/sfi_apex\/anpcomvcpostos\/posto-geral?p08_cnpj_filtro=24230106000140\u0026clear=8\u0026session=5393182298754\u0026cs=1KjwGyOnARcudJssasnzLLxhCUf6ev68sW8crdp17EOb-R96LmsQwb7aaHYzf4GfsPQ4BIm1lIX4AF5JN1W-jYQ"
+}
+}
+}
+]
+,[
+"217894"
+,"20283267000140"
+,"20.283.267\/0001-40"
+,"M.A. COMBUSTIVEIS LTDA."
+,"AUTO POSTO MATRIZ"
+,"ALE COMBUSTIVEIS S.A."
+,"2\/3\/2015"
+,"8,107"
+,"Recebeu 8,107% de outras distribuidoras"
+,"POSTO REVENDEDOR"
+,""
+,"EM OPERA\u00C7\u00C3O"
+,"EM OPERA\u00C7\u00C3O"
+,"RUA MANOEL DE CASTRO,125"
+,""
+,"CANDELARIA"
+,"59064010"
+,"NATAL"
+,"RN"
+,"-05,83026700"
+,"-35,23325120"
+,"PR\/RN0168925"
+,"ANP N\u00BA 261"
+,"RESOLU\u00C7\u00C3O ANP N\u00B0 41\/2013"
+,"48610000942201521"
+,"27\/2\/2015"
+,"2\/3\/2015"
+,"5"
+,"5"
+,"0"
+,"0"
+,"0"
+,"0"
+,"18"
+,"1"
+,"17"
+,"854"
+,"-5,830267"
+,"-35,2332512"
+,"5"
+,""
+,"11"
+,{
+"salt":"v-iNF-hWE14inKORJPUTrA"
+,"protected":"\/wJdDbTV8-bHgHy4YrkVLPs8AxSkH8haXlVB5XGPPGmmFGKucsnAmyFaHzqqo6obAEk0tQX8Uqo4dNHa54SP6uQ"
+,"rowVersion":"73q0SPtAINFZDOgKQIPW_JS7ynRFMjMocrzmGy5eBHKWKdny1ENRWj3taMus61tjeoftJzMOjwk8yfPt3jgukg"
+,"fields":{
+"CNPJ":{
+"url":"\/ordsdw\/r\/sfi_apex\/anpcomvcpostos\/posto-geral?p08_cnpj_filtro=20283267000140\u0026clear=8\u0026session=5393182298754\u0026cs=1gvZOu4lfeNmI4F2CfJCLAvY-X_jWXdn7gPxSE0bKXdtkm4YwQiPx4M1q6LmXo8TGPA0cgghoR8uDd5UU4h4Pnw"
+}
+}
+}
+]
+,[
+"275370"
+,"35697433000122"
+,"35.697.433\/0001-22"
+,"VILELA COMBUSTIVEIS EIRELI"
+,"POSTO FELIPE CAMARAO"
+,"BANDEIRA BRANCA"
+,"4\/8\/2020"
+,""
+,"Sem distribuidora associada"
+,"POSTO REVENDEDOR"
+,""
+,"EM OPERA\u00C7\u00C3O"
+,"EM OPERA\u00C7\u00C3O"
+,"AVENIDA PRESIDENTE RANIERI MAZZILLI,4350"
+,"LOTE  17                  QUADRA1"
+,"FELIPE CAMARAO"
+,"59074185"
+,"NATAL"
+,"RN"
+,"-05,81897830"
+,"-35,26273420"
+,"PR\/RN0201115"
+,"ANP N\u00BA 626"
+,"RESOLU\u00C7\u00C3O ANP N\u00B0 41\/2013"
+,"48610004158202059"
+,"3\/8\/2020"
+,"4\/8\/2020"
+,"5"
+,"5"
+,"0"
+,"0"
+,"0"
+,"0"
+,"15"
+,"0"
+,"15"
+,"875"
+,"-5,8189783"
+,"-35,2627342"
+,"5"
+,""
+,"6"
+,{
+"salt":"yH52JAXtwBehnDEOOQyfuw"
+,"protected":"\/vVWcVGn8OCGHk4PAIjO0NdUDtyTxKQCD0RPSbk4Xlun_4LtPo6em6UaCAjiXdr-OO6FxYgzE4XpVhGICbCuw1g"
+,"rowVersion":"ExTpF5h471RXX4WlNbN-VgiOKPPVDfHyP3_lQXdRK3Pwdju2HdFM_qVZ9SI6cpeuMtR2WOvEz510IaOjiv1g2Q"
+,"fields":{
+"CNPJ":{
+"url":"\/ordsdw\/r\/sfi_apex\/anpcomvcpostos\/posto-geral?p08_cnpj_filtro=35697433000122\u0026clear=8\u0026session=5393182298754\u0026cs=1R1RE97ysNVPaSLiXODz9nWJ4hOaeMVNAXaycVB7J2b5tpPUJn0p566Cf4vIKjgo46-PaOiwjA9xxsHd75RSXxw"
+}
+}
+}
+]
+,[
+"25357"
+,"02316952000306"
+,"02.316.952\/0003-06"
+,"POSTO CAMPO BELO LTDA"
+,""
+,"BANDEIRA BRANCA"
+,"12\/11\/2002"
+,""
+,"Sem distribuidora associada"
+,"POSTO REVENDEDOR"
+,""
+,"EM OPERA\u00C7\u00C3O"
+,"EM OPERA\u00C7\u00C3O"
+,"AVENIDA FELIZARDO FIRMINO DE MOURA,848"
+,""
+,"BAIRRO NORDESTE"
+,"59042200"
+,"NATAL"
+,"RN"
+,"-05,79441780"
+,"-35,24180660"
+,"PR\/RN0029010"
+,"ANP N\u00BA1007"
+,"PORTARIA ANP n\u00BA 116\/2000"
+,"48610012505200235"
+,""
+,"9\/12\/2002"
+,"5"
+,"5"
+,"0"
+,"0"
+,"0"
+,"0"
+,"14"
+,"1"
+,"13"
+,"902"
+,"-5,7944178"
+,"-35,2418066"
+,"5"
+,""
+,"23"
+,{
+"salt":"TxmQEwV0Bs4g55KO_1a9dg"
+,"protected":"\/VlggJtZvsjTXU59ivLAoLFDzvClt2k8jm-RH_jcUOXIL9H-ec-spsaBlb2rLkPxmMEK9-5iX7aJxOq0bjMflGA"
+,"rowVersion":"G0cvObqK-bazaEd8KoDY6dX4ObF5TPPxxeppKCBEqgpjIE4og63jTwgJbSG_WkmORDkwDM1WQc_RTba1wy_SsQ"
+,"fields":{
+"CNPJ":{
+"url":"\/ordsdw\/r\/sfi_apex\/anpcomvcpostos\/posto-geral?p08_cnpj_filtro=02316952000306\u0026clear=8\u0026session=5393182298754\u0026cs=1u6uJJdFBMjhhBBN2mIrkEimHmfukNdkZEx0q8A2K_4fgKKwbiL3jm8-6wLMzgg65VIBtFRUjTdto8SxP8EyVng"
+}
+}
+}
+]
+,[
+"258805"
+,"29327346000180"
+,"29.327.346\/0001-80"
+,"ALECRIM COMERCIO LTDA"
+,""
+,"BANDEIRA BRANCA"
+,"24\/1\/2019"
+,""
+,"Sem distribuidora associada"
+,"POSTO REVENDEDOR"
+,""
+,"EM OPERA\u00C7\u00C3O"
+,"EM OPERA\u00C7\u00C3O"
+,"RUA DOUTOR MARIO NEGOCIO,2202"
+,""
+,"QUINTAS"
+,"59040480"
+,"NATAL"
+,"RN"
+,"-05,79798520"
+,"-35,23565150"
+,"PR\/RN0190579"
+,"ANP N\u00BA 70"
+,"RESOLU\u00C7\u00C3O ANP N\u00B0 41\/2013"
+,"48610000265201974"
+,"22\/1\/2019"
+,"24\/1\/2019"
+,"5"
+,"5"
+,"0"
+,"0"
+,"0"
+,"0"
+,"15"
+,"2"
+,"13"
+,"907"
+,"-5,7979852"
+,"-35,2356515"
+,"5"
+,""
+,"7"
+,{
+"salt":"cLmRWmKPD95wTJsyA8PH0w"
+,"protected":"\/KD1mNNJsUItlVd88i_EVNfDL01VC1ekkmGeQHtlO51DGdnPNWRvfiOq6IubAuCk97GULYWiKXf_PV6QK7RYrAg"
+,"rowVersion":"oG7D1l2GDlJBT1jmChS-WGEepBH8yPG5bANTF3XvXbrKyEU-H3wGnEzV-grhR0bI00CBsFGqpGsBeTIwNMuvaw"
+,"fields":{
+"CNPJ":{
+"url":"\/ordsdw\/r\/sfi_apex\/anpcomvcpostos\/posto-geral?p08_cnpj_filtro=29327346000180\u0026clear=8\u0026session=5393182298754\u0026cs=1GcP-cIdgP46TD0nw3dxoEjpDmOQrUbR96DVc759C9FVOXT8QCD_1qx-235yIWOwXQEHyo-FaA9tBmGVlcc1QSQ"
+}
+}
+}
+]
+,[
+"25202"
+,"08345698000199"
+,"08.345.698\/0001-99"
+,"M. B. COM. E DERIVADOS DE PETROLEO EIRELI"
+,""
+,"ALE COMBUSTIVEIS S.A."
+,"25\/4\/2011"
+,"7,877"
+,"Recebeu 7,877% de outras distribuidoras"
+,"POSTO REVENDEDOR"
+,""
+,"EM OPERA\u00C7\u00C3O"
+,"EM OPERA\u00C7\u00C3O"
+,"RUA JAGUARARI,4227"
+,""
+,"CANDELARIA"
+,"59064500"
+,"NATAL"
+,"RN"
+,"-05,83165330"
+,"-35,22284670"
+,"PR\/RN0210555"
+,"ANP N\u00BA 293"
+,"PORTARIA ANP n\u00BA 116\/2000"
+,"48610005149200716"
+,"28\/3\/2007"
+,"3\/4\/2007"
+,"5"
+,"5"
+,"0"
+,"0"
+,"0"
+,"0"
+,"12"
+,"1"
+,"11"
+,"975"
+,"-5,8316533"
+,"-35,2228467"
+,"5"
+,""
+,"19"
+,{
+"salt":"GSB176yIXehBD982M0xc-w"
+,"protected":"\/s2U0-Yqx9JSUu8RJtsvEEvoi7kPn77odug2SC2GLbqAul3TUPXyOAR9giCPpcPnkblIEgT7hxZ9MwDTZPaTcnA"
+,"rowVersion":"mny_zzt5Hbj8_ePEcbx-tuyXsgUqQL-e7BBg4vXKbcngacfiS8nZKe8y7cHh70o-9bx0dByYPoJUCqACuQDLUw"
+,"fields":{
+"CNPJ":{
+"url":"\/ordsdw\/r\/sfi_apex\/anpcomvcpostos\/posto-geral?p08_cnpj_filtro=08345698000199\u0026clear=8\u0026session=5393182298754\u0026cs=1y5dBz4aFNqC0PwaPlt8M1-Gp68aagzU88ajEEULYuscS-Go96HqZhLh0rDASsfR_xEn4jVVxQYfSY0BuaTGNOw"
+}
+}
+}
+]
+,[
+"25197"
+,"08195919000190"
+,"08.195.919\/0001-90"
+,"JOAO HENRIQUE GODEIRO"
+,"POSTO GODEIRAO"
+,"VIBRA ENERGIA S.A"
+,"22\/6\/2022"
+,"1,285"
+,"Recebeu 1,285% de outras distribuidoras"
+,"POSTO REVENDEDOR"
+,""
+,"EM OPERA\u00C7\u00C3O"
+,"EM OPERA\u00C7\u00C3O"
+,"AVENIDA DR JOAO MEDEIRO FILHO,6181"
+,""
+,"PAJUSSARA"
+,"59122770"
+,"NATAL"
+,"RN"
+,"-05,74483070"
+,"-35,22090070"
+,"PR\/RN0192975"
+,"ANP N\u00BA 99"
+,"PORTARIA ANP n\u00BA 116\/2000"
+,"48610000673200611"
+,"27\/1\/2006"
+,"3\/2\/2006"
+,"4"
+,"4"
+,"0"
+,"0"
+,"0"
+,"0"
+,"21"
+,"0"
+,"21"
+,"1604"
+,"-5,7448307"
+,"-35,2209007"
+,"5"
+,""
+,"20"
+,{
+"salt":"E-ybW7Wu2rJAV0IVCm3GDg"
+,"protected":"\/ltnyKxF8Hc_snqw1iI79BFmKPXwdBz050PiceWwUv-Oi3VHwrXcwf56LT5u5BzduxM9GVTm2AVDJB1f1SzYV5A"
+,"rowVersion":"qtWtDxvLiUVP8mSDr5rUQZUS4xOdgc-SQcCO1WVHUBUaXAqzjCvCMpjN6YQq0dBpYI1Wontiod1l8mUsszFEgw"
+,"fields":{
+"CNPJ":{
+"url":"\/ordsdw\/r\/sfi_apex\/anpcomvcpostos\/posto-geral?p08_cnpj_filtro=08195919000190\u0026clear=8\u0026session=5393182298754\u0026cs=11rW89-RZnj26cI6XPott78e55fdXos4cYPkc4UxFkHWIZW1-gVnznB7sUbScdurECEfxeAylEApS9SRj4biPLQ"
+}
+}
+}
+]
+,[
+"296068"
+,"43644050000114"
+,"43.644.050\/0001-14"
+,"VILELA LA PETROLEO LTDA"
+,"VILELA 02"
+,"BANDEIRA BRANCA"
+,"27\/6\/2022"
+,""
+,"Sem distribuidora associada"
+,"POSTO REVENDEDOR"
+,""
+,"EM OPERA\u00C7\u00C3O"
+,"EM OPERA\u00C7\u00C3O"
+,"RUA VOTUPORANGA,80"
+,""
+,"LAGOA AZUL"
+,"59129430"
+,"NATAL"
+,"RN"
+,"-05,73547670"
+,"-35,25215500"
+,"PR\/RN0227016"
+,"ANP N\u00BA863"
+,"RESOLU\u00C7\u00C3O ANP N\u00B0 41\/2013"
+,"48610215301202206"
+,"24\/6\/2022"
+,"27\/6\/2022"
+,"4"
+,"4"
+,"0"
+,"0"
+,"0"
+,"0"
+,"20"
+,"0"
+,"20"
+,"1607"
+,"-5,7354767"
+,"-35,252155"
+,"5"
+,""
+,"4"
+,{
+"salt":"ZwnGL4rdYvxL4VFydYCT5w"
+,"protected":"\/mmNm5wvLYm5SAl3uu2SFA75UHqoO41q6axMjL3NT1jEDTR64rR-GkaCczeGm0beXRW4sN1Sn0gMi2TZ9JtGdNQ"
+,"rowVersion":"gUq0jIzf-65kUaKTiidhC6OGz4lsqbF0n-rXA97bIb0Ie1TCAxfZlR1kIrurCy5ey3KPm5kpvTIlpr-4idvamg"
+,"fields":{
+"CNPJ":{
+"url":"\/ordsdw\/r\/sfi_apex\/anpcomvcpostos\/posto-geral?p08_cnpj_filtro=43644050000114\u0026clear=8\u0026session=5393182298754\u0026cs=16zne5qHop0AfhuqJPepdapVafDI034S9T9okMpFISikEUZ60blMJL0Xyom0HjfK-EXbnNwryU-xMkYoqQfBYPA"
+}
+}
+}
+]
+,[
+"239532"
+,"26846388000130"
+,"26.846.388\/0001-30"
+,"POSTO MACACO 2 LTDA"
+,"POSTO MACACO"
+,"BANDEIRA BRANCA"
+,"19\/3\/2019"
+,""
+,"Sem distribuidora associada"
+,"POSTO REVENDEDOR"
+,""
+,"EM OPERA\u00C7\u00C3O"
+,"EM OPERA\u00C7\u00C3O"
+,"AVENIDA BERNARDO VIEIRA,1906"
+,""
+,"DIX-SEPT ROSADO"
+,"59054000"
+,"NATAL"
+,"RN"
+,"-05,80655590"
+,"-35,22241870"
+,"PR\/RN0180918"
+,"ANP N\u00BA 493"
+,"RESOLU\u00C7\u00C3O ANP N\u00B0 41\/2013"
+,"48610003784201722"
+,"11\/5\/2017"
+,"17\/5\/2017"
+,"4"
+,"4"
+,"0"
+,"0"
+,"0"
+,"0"
+,"18"
+,"0"
+,"18"
+,"1622"
+,"-5,8065559"
+,"-35,2224187"
+,"5"
+,""
+,"9"
+,{
+"salt":"TgYd8KTKxJfpAYCtVMC2pw"
+,"protected":"\/xe34q2jd86Zp8T-FAH0BdRYYUpfIzkhuye898Mk2xFVzmoKYoWsN7e0iigQY3-4ppn4JCG-TCtg8rT8SLS4Vmw"
+,"rowVersion":"3UVQdr74_8WxxVhGB_883i3iaAq7T7bwvZN3yr9wlpB6BouMC6PM_WUdcoXlFwRmzskJVNie8n0whHU4WW7SMQ"
+,"fields":{
+"CNPJ":{
+"url":"\/ordsdw\/r\/sfi_apex\/anpcomvcpostos\/posto-geral?p08_cnpj_filtro=26846388000130\u0026clear=8\u0026session=5393182298754\u0026cs=1vyNoit3KwQvd-Je4fB7yQydPU8yRq1XvvYfezKG93r5TwbkoawXl-Y_iGsQVlm1O8g7ynSpAAklQ5FEt0nhMzA"
+}
+}
+}
+]
+,[
+"25364"
+,"00980113000109"
+,"00.980.113\/0001-09"
+,"SP COMERCIO E REPRESENTACOES LTDA"
+,"AUTO POSTO ROTA DO SOL"
+,"ALE COMBUSTIVEIS S.A."
+,"25\/9\/2025"
+,"2,431"
+,"Recebeu 2,431% de outras distribuidoras"
+,"POSTO REVENDEDOR"
+,""
+,"EM OPERA\u00C7\u00C3O"
+,"EM OPERA\u00C7\u00C3O"
+,"RUA DESP FABRICIO G PEDROSA,2300"
+,""
+,"PONTA NEGRA"
+,"59092390"
+,"NATAL"
+,"RN"
+,"-05,88289333"
+,"-35,18146667"
+,"PR\/RN0023217"
+,"ANP N\u00BA 194"
+,"PORTARIA ANP n\u00BA 116\/2000"
+,"48610003817200258"
+,""
+,"5\/3\/2002"
+,"4"
+,"4"
+,"0"
+,"0"
+,"0"
+,"0"
+,"16"
+,"0"
+,"16"
+,"1662"
+,"-5,88289333"
+,"-35,18146667"
+,"5"
+,""
+,"24"
+,{
+"salt":"5ZMrR8-Y--yHLSS-qHpa9w"
+,"protected":"\/nSZHUyeWUog5C0iEpB3PZfTZE1ppRctFGp6-Gw91GdPmKSq0z2z05282JZqmyixRrVL2RCRHmctsFqCZMioe4g"
+,"rowVersion":"nMDFwNWKcXrEKIhlDl5r2ob1rfrVcO8lbJAt8wGDGqicIxkukwJgm1rSUgslrjb7GsqH05jOsAG6Evp9lvRmwQ"
+,"fields":{
+"CNPJ":{
+"url":"\/ordsdw\/r\/sfi_apex\/anpcomvcpostos\/posto-geral?p08_cnpj_filtro=00980113000109\u0026clear=8\u0026session=5393182298754\u0026cs=1nbN_6ty0WpbKPSb09lsXpdq3h8PHH8eZ1kcoPWHGVHE86-1MEj6UyFX705CQOFDS38BNWF91bk-4XgETLtzSKA"
+}
+}
+}
+]
+,[
+"233779"
+,"24495443000169"
+,"24.495.443\/0001-69"
+,"MENDES DE MOURA COMERCIO DE COMBUSTIVEIS LTDA"
+,"POSTO NOVA NATAL"
+,"BANDEIRA BRANCA"
+,"10\/10\/2016"
+,""
+,"Sem distribuidora associada"
+,"POSTO REVENDEDOR"
+,""
+,"EM OPERA\u00C7\u00C3O"
+,"EM OPERA\u00C7\u00C3O"
+,"RUA BELA VISTA (LOT C PRAIA),100"
+,""
+,"LAGOA AZUL"
+,"59129696"
+,"NATAL"
+,"RN"
+,"-05,74089920"
+,"-35,26263030"
+,"PR\/RN0177634"
+,"ANP N\u00BA 1.186"
+,"RESOLU\u00C7\u00C3O ANP N\u00B0 41\/2013"
+,"48610011037201687"
+,"6\/10\/2016"
+,"10\/10\/2016"
+,"4"
+,"4"
+,"0"
+,"0"
+,"0"
+,"0"
+,"14"
+,"0"
+,"14"
+,"1705"
+,"-5,7408992"
+,"-35,2626303"
+,"5"
+,""
+,"10"
+,{
+"salt":"jpxFxAsF65-gsaVXP3s4Zg"
+,"protected":"\/nqziPWjDc-pVekGsnhBHc3o1zaSxOeNeUBC1Se6Wd1VgBtamx1UirgWdwwlYXbp47j1QgFWVzdgh1dPFEvpVYA"
+,"rowVersion":"VkmIaZOPd4eUKWZJLmzk03wQ1VTkkEK5g_MZpqOSJCdjoIMPEY-tJHHXB1-qx_4w58X4IS_uKHjHip3Gs84CeQ"
+,"fields":{
+"CNPJ":{
+"url":"\/ordsdw\/r\/sfi_apex\/anpcomvcpostos\/posto-geral?p08_cnpj_filtro=24495443000169\u0026clear=8\u0026session=5393182298754\u0026cs=1wr1ox_uTiCV2p_KcIof2yQe74VkqYML5ctJkquStO46AnuMcIA6tCuHmibAf99-OADD-tU2yggLs5bdanP-gmQ"
+}
+}
+}
+]
+,[
+"258476"
+,"08534562001360"
+,"08.534.562\/0013-60"
+,"FRANCISCO DE SALES DANTAS"
+,"POSTO NAZARE"
+,"VIBRA ENERGIA S.A"
+,"11\/1\/2019"
+,"4,713"
+,"Recebeu 4,713% de outras distribuidoras"
+,"POSTO REVENDEDOR"
+,""
+,"EM OPERA\u00C7\u00C3O"
+,"EM OPERA\u00C7\u00C3O"
+,"AVENIDA INTERVENTOR MARIO CAMARA,2731"
+,""
+,"NOSSA SENHORA DE NAZARE"
+,"59062600"
+,"NATAL"
+,"RN"
+,"-05,81744330"
+,"-35,22810670"
+,"PR\/RN0190373"
+,"ANP N\u00BA 26"
+,"RESOLU\u00C7\u00C3O ANP N\u00B0 41\/2013"
+,"48610012155201874"
+,"10\/1\/2019"
+,"11\/1\/2019"
+,"4"
+,"4"
+,"0"
+,"0"
+,"0"
+,"0"
+,"9"
+,"1"
+,"8"
+,"2037"
+,"-5,8174433"
+,"-35,2281067"
+,"5"
+,""
+,"7"
+,{
+"salt":"_WNj_iYRt9vfg20rBMaO-Q"
+,"protected":"\/RCXjfjTAdd2C-bphDWho8Du4FugpgrAduAc8dBHp9CN8MflY6gR_Ux5ULPjZUGhvg0OJ_lFsBK9OvxzBNtFvVA"
+,"rowVersion":"drthmA3lomQ4yLhskh5fmBPtWQCIo58zGqvZg4JDSFJY1G6qYEh4iGN4MSNpaOkM3kZFIsCsi26tjgXVUrBAjQ"
+,"fields":{
+"CNPJ":{
+"url":"\/ordsdw\/r\/sfi_apex\/anpcomvcpostos\/posto-geral?p08_cnpj_filtro=08534562001360\u0026clear=8\u0026session=5393182298754\u0026cs=1PYvSwFSvWvSMJrbVaXqVyRQKZrtQFCZPmoBBHPUG4C-LtR2V80SWhUN8mr-G9b2SPzT-MkkZeJ_27L6AWYvYdw"
+}
+}
+}
+]
+,[
+"25332"
+,"04065360000203"
+,"04.065.360\/0002-03"
+,"QUIRINO E SOUZA COMERCIO DE PETROLEO E SERVICOS LTDA"
+,"POSTO SAO PEDRO"
+,"RAIZEN S.A."
+,"18\/5\/2011"
+,""
+,"Recebeu apenas da distribuidora"
+,"POSTO REVENDEDOR"
+,""
+,"EM OPERA\u00C7\u00C3O"
+,"EM OPERA\u00C7\u00C3O"
+,"RUA APODI,520"
+,""
+,"TIROL"
+,"59020130"
+,"NATAL"
+,"RN"
+,"-05,79148710"
+,"-35,20160190"
+,"PR\/RN0029450"
+,"ANP N\u00BA 341"
+,"PORTARIA ANP n\u00BA 116\/2000"
+,"48610013727200275"
+,"7\/4\/2003"
+,"16\/4\/2003"
+,"3"
+,"3"
+,"0"
+,"0"
+,"0"
+,"0"
+,"18"
+,"0"
+,"18"
+,"3114"
+,"-5,7914871"
+,"-35,2016019"
+,"5"
+,""
+,"23"
+,{
+"salt":"7rWLprkiyLy95qCSAI2WLw"
+,"protected":"\/2brgwUpcdeF6q8MWuGJP-jYDplnp7N6Js8qLOW5cwn6C3_EFvIigZsIFjaaRgp4donCCn2wG-SNwISIFFUbtrg"
+,"rowVersion":"XtYPK-K_Fp5Hp09tq2GGdazQRjWT-XjOTtsmPbx2kLAMKcPbn0ZLkNOEkOvQtxrsYChg8MtoGeMpTeOWUdxECQ"
+,"fields":{
+"CNPJ":{
+"url":"\/ordsdw\/r\/sfi_apex\/anpcomvcpostos\/posto-geral?p08_cnpj_filtro=04065360000203\u0026clear=8\u0026session=5393182298754\u0026cs=1RzxKba1vIT1Nvx_tWqlDKbhJf2D3ZW80pe9EzVCqlzrdtHC7pXDIUuS6Mwz2BMpPcmb6R3rWMk_gCImPn02wJQ"
+}
+}
+}
+]
+,[
+"299815"
+,"48438653000183"
+,"48.438.653\/0001-83"
+,"Z N COM\u00C9RCIO LTDA"
+,"Z N COM\u00C9RCIO LTDA"
+,"IPIRANGA PRODUTOS DE PETR\u00D3LEO S.A"
+,"12\/1\/2023"
+,"14,444"
+,"Recebeu 14,444% de outras distribuidoras"
+,"POSTO REVENDEDOR"
+,""
+,"EM OPERA\u00C7\u00C3O"
+,"EM OPERA\u00C7\u00C3O"
+,"AVENIDA  MOEMA TINOCO DA CUNHA LIMA,165"
+,"LOTE 678141516"
+,"PAJU\u00C7ARA"
+,"59133090"
+,"NATAL"
+,"RN"
+,"-05,74320030"
+,"-35,22527180"
+,"PR\/RN0235127"
+,"ANP N\u00BA 37"
+,"RESOLU\u00C7\u00C3O ANP N\u00B0 41\/2013"
+,"48610200708202310"
+,"11\/1\/2023"
+,"12\/1\/2023"
+,"3"
+,"3"
+,"0"
+,"0"
+,"0"
+,"0"
+,"18"
+,"1"
+,"17"
+,"3150"
+,"-5,7432003"
+,"-35,2252718"
+,"5"
+,""
+,"3"
+,{
+"salt":"toBIsoLW-qOFOurgINoNlQ"
+,"protected":"\/f29tsxwLUcySujLyJdVgqkzV-Z6pwuDm7KB9HSa3TEasVbujLtB_C5hl0lt0bJqkW6KJjSHzBpe7kTekxxtVVg"
+,"rowVersion":"2QAhIT2OIomt4OR79bixo2KKTytbEym4WwUIlFTHRmhzzoMKzzfr4gpj_qUQe8N_68JouQl9s1IWzyoULSn8zw"
+,"fields":{
+"CNPJ":{
+"url":"\/ordsdw\/r\/sfi_apex\/anpcomvcpostos\/posto-geral?p08_cnpj_filtro=48438653000183\u0026clear=8\u0026session=5393182298754\u0026cs=1buh2qf1SHOxX7YsQQjBeLkOawlJf6JwPrJ9uHshzLAO4qvmQYC_CsfZaPy31sZlHY5E2qdpmobFR9wMs6zimrQ"
+}
+}
+}
+]
+,[
+"292381"
+,"36113185000198"
+,"36.113.185\/0001-98"
+,"POSTO NUNES E NUNES LTDA"
+,"POSTO NUNES E NUNES"
+,"IPIRANGA PRODUTOS DE PETR\u00D3LEO S.A"
+,"1\/8\/2022"
+,"24,454"
+,"Recebeu 24,454% de outras distribuidoras"
+,"POSTO REVENDEDOR"
+,""
+,"EM OPERA\u00C7\u00C3O"
+,"EM OPERA\u00C7\u00C3O"
+,"AVENIDA FELIZARDO FIRMINO MOURA,250"
+,""
+,"NORDESTE"
+,"59042200"
+,"NATAL"
+,"RN"
+,"-05,79855627"
+,"-35,23790310"
+,"PR\/RN0221704"
+,"ANP N\u00AA 307"
+,"RESOLU\u00C7\u00C3O ANP N\u00B0 41\/2013"
+,"48610221336202195"
+,"7\/3\/2022"
+,"8\/3\/2022"
+,"3"
+,"3"
+,"0"
+,"0"
+,"0"
+,"0"
+,"16"
+,"0"
+,"16"
+,"3194"
+,"-5,79855627"
+,"-35,2379031"
+,"5"
+,""
+,"4"
+,{
+"salt":"tiGivm9sYyYjY-dPyG5lBQ"
+,"protected":"\/yteyFQ1jgqoaqylP9-TsDgCDhc6LTDLc0OeDUiQMguIHARERk1k4U6siCfjP71Y_bCZeGLy79OujXPof8u2DAQ"
+,"rowVersion":"5ocZRMonDa1xw8fG8_fN2taXeKUi3HqEmnD6NTECEghZmndQlU7IvEypI-9C9IwysBkwWtNB0DoptmPcxvOg5Q"
+,"fields":{
+"CNPJ":{
+"url":"\/ordsdw\/r\/sfi_apex\/anpcomvcpostos\/posto-geral?p08_cnpj_filtro=36113185000198\u0026clear=8\u0026session=5393182298754\u0026cs=1sCD92WWBg6l0C3JAW1eYo8UXbWUA0k-aLV-dUktXNxI4HmKlvOsMHM8M1XyTE8ejWXlWnXawtPiDsyor6nwCCQ"
+}
+}
+}
+]
+,[
+"25273"
+,"35304542000213"
+,"35.304.542\/0002-13"
+,"CIRNE PNEUS COMERCIO E SERVICOS LTDA"
+,"CIRNE POSTOS"
+,"VIBRA ENERGIA S.A"
+,"4\/2\/2002"
+,"1,765"
+,"Recebeu 1,765% de outras distribuidoras"
+,"POSTO REVENDEDOR"
+,""
+,"EM OPERA\u00C7\u00C3O"
+,"EM OPERA\u00C7\u00C3O"
+,"AVENIDA PRUDENTE DE MORAIS,3949"
+,"ANEXO ESQ C AV N CASTRO"
+,"LAGOA NOVA"
+,"59056200"
+,"NATAL"
+,"RN"
+,"-05,81661460"
+,"-35,21170900"
+,"PR\/RN0023151"
+,"ANP N\u00BA 194"
+,"PORTARIA ANP n\u00BA 116\/2000"
+,"48610003833200241"
+,""
+,"5\/3\/2002"
+,"3"
+,"3"
+,"0"
+,"0"
+,"0"
+,"0"
+,"18"
+,"2"
+,"16"
+,"3197"
+,"-5,8166146"
+,"-35,211709"
+,"5"
+,""
+,"24"
+,{
+"salt":"KK3kUTjzXcXjaTyDQhGpnw"
+,"protected":"\/tEspTl1JId3xpzyx5rqjDy6SQo7wNB8xnij11fUy5cWKniX6xl73CTyQXSSOEkN6_GJ5rkGCfBIPc5-CMOwywQ"
+,"rowVersion":"5LNhGB-AgVeQbcoNKLegqHecSWojbBpLI2qcDOK-3MpQ3ULd4u1DK_hhZk6-ikPg3xTb8OwdKcEDJKXpY1X4ZA"
+,"fields":{
+"CNPJ":{
+"url":"\/ordsdw\/r\/sfi_apex\/anpcomvcpostos\/posto-geral?p08_cnpj_filtro=35304542000213\u0026clear=8\u0026session=5393182298754\u0026cs=1pMALLhfrpzeo3ny7LHGxqUiy2NdZRO2f0Irtj4LnXb92Jqj719UXanCLr7uKRZG_VYdkwG0hGtCntbQn7Df-KA"
+}
+}
+}
+]
+,[
+"293140"
+,"38262498000133"
+,"38.262.498\/0001-33"
+,"REDINHA COMERCIAL DE COMBUSTIVEL DOMINGOS LTDA"
+,"REDE DE POSTO DOMINGOS"
+,"BANDEIRA BRANCA"
+,"30\/3\/2022"
+,""
+,"Sem distribuidora associada"
+,"POSTO REVENDEDOR"
+,""
+,"EM OPERA\u00C7\u00C3O"
+,"EM OPERA\u00C7\u00C3O"
+,"RUA PADRE CICERO ROMAO,560"
+,""
+,"REDINHA"
+,"59122210"
+,"NATAL"
+,"RN"
+,"-05,74252142"
+,"-35,21608891"
+,"PR\/RN0222978"
+,"ANP N\u00BA 403"
+,"RESOLU\u00C7\u00C3O ANP N\u00B0 41\/2013"
+,"48610205768202230"
+,"29\/3\/2022"
+,"30\/3\/2022"
+,"3"
+,"3"
+,"0"
+,"0"
+,"0"
+,"0"
+,"15"
+,"0"
+,"15"
+,"3212"
+,"-5,74252142"
+,"-35,21608891"
+,"5"
+,""
+,"4"
+,{
+"salt":"6XhZ8-jxhMXlgHD_l89h_w"
+,"protected":"\/bka57gmAE2PNJ1xuJgDdmYS3DD87B1g1OaMAEUI8VL6Hwau9Hxlt8z2r762CAJmEqx2FxQmSF32uSyiF_Xtraw"
+,"rowVersion":"kpDH6uo48Ugd2ZRpsQ-R8QTCURI-VowZBbYxCzlGBW_5FIR2z3q6u5PpxY4pge-kkCcY-Frd0PviNHop7zJ3aw"
+,"fields":{
+"CNPJ":{
+"url":"\/ordsdw\/r\/sfi_apex\/anpcomvcpostos\/posto-geral?p08_cnpj_filtro=38262498000133\u0026clear=8\u0026session=5393182298754\u0026cs=1sDrA6nHwAEi-eXDXUp1NQql1Xn2v1hVETSIyW9JFIyCzpqBKD9mnE1uzOwvFtUfJBONPY4wL6NrSKMuhVWwIng"
+}
+}
+}
+]
+,[
+"301186"
+,"36919772000179"
+,"36.919.772\/0001-79"
+,"CIDADE NOVA COMBUSTIVEIS LTDA"
+,"POSTOS RCM"
+,"BANDEIRA BRANCA"
+,"27\/3\/2023"
+,""
+,"Sem distribuidora associada"
+,"POSTO REVENDEDOR"
+,""
+,"EM OPERA\u00C7\u00C3O"
+,"EM OPERA\u00C7\u00C3O"
+,"AVENIDA SOLANGE NUNES DO NASCIMENTO,140"
+,""
+,"CIDADE NOVA"
+,"59072500"
+,"NATAL"
+,"RN"
+,"-05,83099490"
+,"-35,23963700"
+,"PR\/RN0238328"
+,"ANP N\u00BA 286"
+,"RESOLU\u00C7\u00C3O ANP N\u00B0 41\/2013"
+,"48610206075202345"
+,"24\/3\/2023"
+,"27\/3\/2023"
+,"3"
+,"3"
+,"0"
+,"0"
+,"0"
+,"0"
+,"15"
+,"0"
+,"15"
+,"3223"
+,"-5,8309949"
+,"-35,239637"
+,"5"
+,""
+,"3"
+,{
+"salt":"We1tkHGDCs3kHvRImHx6Jg"
+,"protected":"\/8IBRHcwSTIe1O8lcd0iOKU1T61fZpQH0xV3CWsBfpIF3NghNRPDNH1hV3cblfb7Iy52c8M-oUR1zNpwcAZ0FLg"
+,"rowVersion":"jW2Zu5M3Dpb2ZQmO_lYaQD2imIFAjHmFDQPNmMn1t2HAiEsLJ-w2110209Zojk92LeTveGa7hJyb-CW6Q0UMYA"
+,"fields":{
+"CNPJ":{
+"url":"\/ordsdw\/r\/sfi_apex\/anpcomvcpostos\/posto-geral?p08_cnpj_filtro=36919772000179\u0026clear=8\u0026session=5393182298754\u0026cs=1IE1GJzruOFz-CvacW6vZquMsX348raBFwDya5KxhYB7wYh8W0_qRfS4KgarV89CP4NF-I9vXXGuWG8AjNaT1Cg"
+}
+}
+}
+]
+,[
+"25182"
+,"09142543000118"
+,"09.142.543\/0001-18"
+,"MENDES PETROLEO LTDA"
+,"POSTO LAGOA NOVA"
+,"BANDEIRA BRANCA"
+,"7\/12\/2007"
+,""
+,"Sem distribuidora associada"
+,"POSTO REVENDEDOR"
+,""
+,"EM OPERA\u00C7\u00C3O"
+,"EM OPERA\u00C7\u00C3O"
+,"AVENIDA PRUDENTE DE MORAIS,5050"
+,""
+,"LAGOA NOVA"
+,"59063200"
+,"NATAL"
+,"RN"
+,"-05,82556990"
+,"-35,21589010"
+,"PR\/RN0220938"
+,"ANP N\u00BA 1282"
+,"PORTARIA ANP n\u00BA 116\/2000"
+,"48610014587200767"
+,"13\/12\/2007"
+,"18\/12\/2007"
+,"3"
+,"3"
+,"0"
+,"0"
+,"0"
+,"0"
+,"15"
+,"0"
+,"15"
+,"3268"
+,"-5,8255699"
+,"-35,2158901"
+,"5"
+,""
+,"18"
+,{
+"salt":"Sg29BwHfcdWRPt27X0ou5Q"
+,"protected":"\/4Bf9rlaRvq4nZcA3_YhXymxWipf3Ou0mnh_0FTz9iae_v--uGND-Gxj0Q67dLrDxBi2S9sfPfJuY2RJzuyNNqQ"
+,"rowVersion":"v67OGd3fg6c__iKIvaCpvFVUEFTPuO9VFHDUrSWX7unXyUdnA3Y9PNP6EZb6Z68pva-RhS4gFhtYWHlA2ab_JQ"
+,"fields":{
+"CNPJ":{
+"url":"\/ordsdw\/r\/sfi_apex\/anpcomvcpostos\/posto-geral?p08_cnpj_filtro=09142543000118\u0026clear=8\u0026session=5393182298754\u0026cs=1VR9rO0kGeB1fEEQvO_sLLlY0MYgLonlalm_4AL6CHwEdnyc2_b3WFnJvKcAfS9SrJaKXcOYiDzWfzUuSNy6MJA"
+}
+}
+}
+]
+,[
+"25358"
+,"02316952000225"
+,"02.316.952\/0002-25"
+,"POSTO CAMPO BELO LTDA"
+,""
+,"BANDEIRA BRANCA"
+,"10\/11\/2003"
+,""
+,"Sem distribuidora associada"
+,"POSTO REVENDEDOR"
+,""
+,"EM OPERA\u00C7\u00C3O"
+,"EM OPERA\u00C7\u00C3O"
+,"RODOVIA BR 101,80"
+,""
+,"N.S.DA APRESENTACAO"
+,"59115001"
+,"NATAL"
+,"RN"
+,"-05,75791190"
+,"-35,28786930"
+,"PR\/RN0019996"
+,"ANP N\u00BA 24"
+,"PORTARIA ANP n\u00BA 116\/2000"
+,"48610018301200127"
+,""
+,"10\/1\/2002"
+,"3"
+,"3"
+,"0"
+,"0"
+,"0"
+,"0"
+,"12"
+,"1"
+,"11"
+,"3542"
+,"-5,7579119"
+,"-35,2878693"
+,"5"
+,""
+,"24"
+,{
+"salt":"WXMt6QyVwuVp_LU8zttvvw"
+,"protected":"\/EWGmwHoKCxG056ByuM_lPQbYbFGNOOKWuhv7uVbncwYV9oIASCTuzWFPHHLJ5hYnuPUmC2s2uyMYlDeehIUHWw"
+,"rowVersion":"4cg2lqbQr8ncP2L3Hqi-5BYpNjhxcTG3U9BRvboBcbkLAHLpfOeaiUIhePhTgLGIBQo81tV4hsjGTYxKUE1ePg"
+,"fields":{
+"CNPJ":{
+"url":"\/ordsdw\/r\/sfi_apex\/anpcomvcpostos\/posto-geral?p08_cnpj_filtro=02316952000225\u0026clear=8\u0026session=5393182298754\u0026cs=1UUIMyc5ziSwpXsfXtVdcjwrlAND3A6AGSDo5UvQr4TiHWSjGtiglJJNKsBhsb3XA3JSQW5mOh7hPk1tA7Jq_Tw"
+}
+}
+}
+]
+,[
+"25277"
+,"24363368000182"
+,"24.363.368\/0001-82"
+,"FLOR \u0026 CIA LTDA"
+,"POSTO SAO LUIZ IV"
+,"RAIZEN S.A."
+,"2\/4\/2007"
+,""
+,"Recebeu apenas da distribuidora"
+,"POSTO REVENDEDOR"
+,""
+,"EM OPERA\u00C7\u00C3O"
+,"EM OPERA\u00C7\u00C3O"
+,"AVENIDA PRUDENTE DE MORAIS,2056"
+,""
+,"BARRO VERMELHO"
+,"59022400"
+,"NATAL"
+,"RN"
+,"-05,80033940"
+,"-35,20628090"
+,"PR\/RN0028173"
+,"ANP N\u00BA 865"
+,"PORTARIA ANP n\u00BA 116\/2000"
+,"48610013173200214"
+,""
+,"7\/11\/2002"
+,"3"
+,"3"
+,"0"
+,"0"
+,"0"
+,"0"
+,"12"
+,"1"
+,"11"
+,"3590"
+,"-5,8003394"
+,"-35,2062809"
+,"5"
+,""
+,"24"
+,{
+"salt":"BnrrFAhSiz70MnCz1Sm2Sg"
+,"protected":"\/NKAH6oy6wBi47w5uC3TNQw9qffaOs3cLwTaeMKHtKizei_NmwXRGOpqXuUoYP2yk_uSKYlMJYNmjSOl6f3GmJw"
+,"rowVersion":"mFcYj4Gnso1PV-GiHPoczpiaIgo7uG2Y8tHxWxucHLDN3RvxboBtQLydZrcvY68TFD3dG6-lnBz-TBVjfaNgFg"
+,"fields":{
+"CNPJ":{
+"url":"\/ordsdw\/r\/sfi_apex\/anpcomvcpostos\/posto-geral?p08_cnpj_filtro=24363368000182\u0026clear=8\u0026session=5393182298754\u0026cs=1-taROtwtfZHNpg8t-SDbld4QXWTAr4X1eVXKKJfLHcqU8Y5kqeMzdI8PFSf8ojLLhY1UKTDOVYKsZULp3VkcAg"
+}
+}
+}
+]
+,[
+"257057"
+,"26708943000248"
+,"26.708.943\/0002-48"
+,"T M COMBUSTIVEIS LTDA"
+,"POSTO LEMON IV - NEVALDO (CARRASCO)"
+,"BANDEIRA BRANCA"
+,"23\/11\/2018"
+,""
+,"Sem recebimento registrado"
+,"POSTO REVENDEDOR"
+,""
+,"EM OPERA\u00C7\u00C3O"
+,"EM OPERA\u00C7\u00C3O"
+,"AVENIDA NEVALDO ROCHA,1050"
+,""
+,"QUINTAS"
+,"59051000"
+,"NATAL"
+,"RN"
+,"-05,80401120"
+,"-35,22955410"
+,"PR\/RN0189678"
+,"ANP N\u00BA 1.291"
+,"RESOLU\u00C7\u00C3O ANP N\u00B0 41\/2013"
+,"48610010959201839"
+,"19\/11\/2018"
+,"23\/11\/2018"
+,"3"
+,"3"
+,"0"
+,"0"
+,"0"
+,"0"
+,"12"
+,"1"
+,"11"
+,"3624"
+,"-5,8040112"
+,"-35,2295541"
+,"5"
+,""
+,"7"
+,{
+"salt":"-3LgkIR3ZNDrJW1k3UIFPw"
+,"protected":"\/0aOFU0eIWk1El6LDuBTrkFaDOGEK0yMTugjQa4OgElqVrK-1XJAbzwYGlKuz4FxaIzw31S_Xgvh780KRaxArlw"
+,"rowVersion":"UVQGzUPTBIlnHXLstgN1dCU7oMQRX5A8EivwrzddYF5CDOJocqMybH1WAveTRG4gANA2iXxa73qBW2475V17zA"
+,"fields":{
+"CNPJ":{
+"url":"\/ordsdw\/r\/sfi_apex\/anpcomvcpostos\/posto-geral?p08_cnpj_filtro=26708943000248\u0026clear=8\u0026session=5393182298754\u0026cs=1vUilW_ypUL9A37X6YRsZLHepq3D1c_Qmh70YqhgRyCo9_6VFPeAfHfqwERTDrF1CJqAoWqv0WZUak7MhQsrphQ"
+}
+}
+}
+]
+,[
+"25225"
+,"35283670000147"
+,"35.283.670\/0001-47"
+,"TRANSPORTES E COMERCIO NOVO HORIZONTE LTDA"
+,""
+,"BANDEIRA BRANCA"
+,"13\/11\/2024"
+,""
+,"Sem distribuidora associada"
+,"POSTO REVENDEDOR"
+,""
+,"EM OPERA\u00C7\u00C3O"
+,"EM OPERA\u00C7\u00C3O"
+,"AVENIDA DAO SILVEIRA,3712"
+,""
+,"CANDELARIA"
+,"59066180"
+,"NATAL"
+,"RN"
+,"-05,85307150"
+,"-35,21095450"
+,"PR\/RN0012188"
+,"ANP 708"
+,"PORTARIA ANP n\u00BA 116\/2000"
+,"48610012260200165"
+,""
+,"8\/8\/2001"
+,"3"
+,"3"
+,"0"
+,"0"
+,"0"
+,"0"
+,"11"
+,"1"
+,"10"
+,"3712"
+,"-5,8530715"
+,"-35,2109545"
+,"5"
+,""
+,"25"
+,{
+"salt":"JnMGRloYV4xafE_1ugivFg"
+,"protected":"\/SQm941K5WpGD3ZIF-I-Drp1MxIo1Xbc9-eetSWXDFsuwkWCkVfyo_yAutHN3UPTvib9pIIPi3moTWuJAB9-V6A"
+,"rowVersion":"Fb1YHSu3vmogMx-0wqzTRyBUkC9nIfqgYScvEODpNuTdmh3IYlymBVYztL_szI-klX7ZK5dUXFlh2EvG6hwyxw"
+,"fields":{
+"CNPJ":{
+"url":"\/ordsdw\/r\/sfi_apex\/anpcomvcpostos\/posto-geral?p08_cnpj_filtro=35283670000147\u0026clear=8\u0026session=5393182298754\u0026cs=1GoyrHJcj58dh89YNU95QiDEdTX0GuH8R537ndV_U4aaQ5j64NRxwj-y5hrXEsUCyMDmJb77aH2npAyCFEcDsMQ"
+}
+}
+}
+]
+,[
+"234505"
+,"26292126000170"
+,"26.292.126\/0001-70"
+,"REVISE COMBUSTIVEIS LTDA"
+,"POSTO SENADOR"
+,"BANDEIRA BRANCA"
+,"14\/1\/2020"
+,""
+,"Sem distribuidora associada"
+,"POSTO REVENDEDOR"
+,""
+,"EM OPERA\u00C7\u00C3O"
+,"EM OPERA\u00C7\u00C3O"
+,"AVENIDA CAPITAO-MOR GOUVEIA,2232"
+,""
+,"CIDADE DA ESPERANCA"
+,"59070400"
+,"NATAL"
+,"RN"
+,"-05,82267560"
+,"-35,22974090"
+,"PR\/RN0178068"
+,"ANP N\u00BA 1.303"
+,"RESOLU\u00C7\u00C3O ANP N\u00B0 41\/2013"
+,"48610012614201658"
+,"4\/11\/2016"
+,"9\/11\/2016"
+,"3"
+,"3"
+,"0"
+,"0"
+,"0"
+,"0"
+,"8"
+,"0"
+,"8"
+,"4137"
+,"-5,8226756"
+,"-35,2297409"
+,"5"
+,""
+,"9"
+,{
+"salt":"DfUDp8xvH16abB9J5MJ0IQ"
+,"protected":"\/0Qlw0r_6JMG1OzXaZW3eDVH_k_Qe-Gti45t2PT6rs9s_f77yFYOX7MUWcTvGqIv9rMaHFwUwqCPHEh-QTpOOTA"
+,"rowVersion":"CfyzI3HWWEfN_NwTp5P6ezric8AFqivWzYm5kqrTSbr5tXtsjCWgUzsOVjWSRtYjawZ1r3awP7kXg9Iyu9EXPQ"
+,"fields":{
+"CNPJ":{
+"url":"\/ordsdw\/r\/sfi_apex\/anpcomvcpostos\/posto-geral?p08_cnpj_filtro=26292126000170\u0026clear=8\u0026session=5393182298754\u0026cs=1l_2kqISrXVJPv4JpnHqTcwJJXxulT-HjJ2G_V_q8Bp6lZWvtegg3LYpolxKSMJMFxirIKiIQBF6DKhmzi5pP3Q"
+}
+}
+}
+]
+,[
+"25198"
+,"07615434000145"
+,"07.615.434\/0001-45"
+,"HSI DISTRIBUIDORA DE COMBUST\u00CDVEIS LTDA."
+,"POSTO HSI"
+,"VIBRA ENERGIA S.A"
+,"16\/1\/2006"
+,""
+,"Recebeu apenas da distribuidora"
+,"POSTO REVENDEDOR"
+,""
+,"EM OPERA\u00C7\u00C3O"
+,"EM OPERA\u00C7\u00C3O"
+,"AVENIDA ENGENHEIRO ROBERTO FREIRE,1166"
+,""
+,"CAPIM MACIO"
+,"59078600"
+,"NATAL"
+,"RN"
+,"-05,85530920"
+,"-35,19976990"
+,"PR\/RN0192772"
+,"ANP N\u00BA 72"
+,"PORTARIA ANP n\u00BA 116\/2000"
+,"48610000570200641"
+,"17\/1\/2006"
+,"20\/1\/2006"
+,"2"
+,"2"
+,"0"
+,"0"
+,"0"
+,"0"
+,"27"
+,"0"
+,"27"
+,"5871"
+,"-5,8553092"
+,"-35,1997699"
+,"5"
+,""
+,"20"
+,{
+"salt":"ORg5Nkk4Doln7Z_18ZNHIg"
+,"protected":"\/PIOGaMekynA3JuRc0rJuj5eFSDeNJRpD5PPb-gmVBs_J0TZDdjpnOHl6kjQb2l9Xuu5IqMpXvK-4YdLrE-sJyA"
+,"rowVersion":"--9et8H_4cUikvwzC1pVaj3Y4SpaqVEjq-4tZIBDH9WJkgRnoKCqmtF-lK1gziHLYaZaz4ul5wl6mhUq-S7gZg"
+,"fields":{
+"CNPJ":{
+"url":"\/ordsdw\/r\/sfi_apex\/anpcomvcpostos\/posto-geral?p08_cnpj_filtro=07615434000145\u0026clear=8\u0026session=5393182298754\u0026cs=1dgO1BnPM37ZQ_F7sRGPStvny-dBLYXeOixRyjbB5_hZDpbooS0ctiocPZ0x_zWZFqjIxtVA3_Hu4lr5gja74Qg"
+}
+}
+}
+]
+,[
+"42717"
+,"04065360000122"
+,"04.065.360\/0001-22"
+,"QUIRINO E SOUZA COMERCIO DE PETROLEO E SERVICOS LTDA"
+,"POSTO MADRE TERESA"
+,"VIBRA ENERGIA S.A"
+,"4\/1\/2017"
+,""
+,"Recebeu apenas da distribuidora"
+,"POSTO REVENDEDOR"
+,""
+,"EM OPERA\u00C7\u00C3O"
+,"EM OPERA\u00C7\u00C3O"
+,"AVENIDA GOVERNADOR TARCISIO DE VASCONCELOS MAIA,2038"
+,"LOTE  17                  QUADRA50"
+,"CANDELARIA"
+,"59066035"
+,"NATAL"
+,"RN"
+,"-05,84586000"
+,"-35,21658000"
+,"PR\/RN0178194"
+,"ANP N\u00BA 3"
+,"RESOLU\u00C7\u00C3O ANP N\u00B0 41\/2013"
+,"48610012711201641"
+,"3\/1\/2017"
+,"4\/1\/2017"
+,"2"
+,"2"
+,"0"
+,"0"
+,"0"
+,"0"
+,"20"
+,"0"
+,"20"
+,"6061"
+,"-5,84586"
+,"-35,21658"
+,"5"
+,""
+,"9"
+,{
+"salt":"XzvOF0o5xnDZurpEq2-vow"
+,"protected":"\/TuOJvSYiKyXYpTgH0SJl4q5COhw0CKqdRuNRXlSTBgOmmV7X32Vem_qSKg3AGybu5O9cnr925cvIDjs81brmjA"
+,"rowVersion":"dqsm00C6aUH1v9u0bq73TeWGaGreW6_InIHHfmnz7CVySvIjQilTTvNDZm17vAKuV80eg-grIWSdlTBE-VM2eg"
+,"fields":{
+"CNPJ":{
+"url":"\/ordsdw\/r\/sfi_apex\/anpcomvcpostos\/posto-geral?p08_cnpj_filtro=04065360000122\u0026clear=8\u0026session=5393182298754\u0026cs=1qjdH_MszS4j9tId4Bmx5bU7Yh5OzsYLtoU0hwynpdMhErs-9NrNJhb_RaSzlEWR7IIsi0TKVKo4J9QzUV2WLOQ"
+}
+}
+}
+]
+,[
+"25192"
+,"35298330000602"
+,"35.298.330\/0006-02"
+,"JVC COMERCIAL LTDA"
+,"POSTO CANDELARIA"
+,"ALE COMBUSTIVEIS S.A."
+,"13\/3\/2020"
+,"11,249"
+,"Recebeu 11,249% de outras distribuidoras"
+,"POSTO REVENDEDOR"
+,""
+,"EM OPERA\u00C7\u00C3O"
+,"EM OPERA\u00C7\u00C3O"
+,"AVENIDA PRUDENTE DE MORAIS,1854"
+,""
+,"LAGOA NOVA"
+,"59063200"
+,"NATAL"
+,"RN"
+,"-05,83199170"
+,"-35,21774830"
+,"PR\/RN0202074"
+,"ANP n\u00BA 1180"
+,"PORTARIA ANP n\u00BA 116\/2000"
+,"48610010153200615"
+,"9\/11\/2006"
+,"14\/11\/2006"
+,"2"
+,"2"
+,"0"
+,"0"
+,"0"
+,"0"
+,"18"
+,"0"
+,"18"
+,"6108"
+,"-5,8319917"
+,"-35,2177483"
+,"5"
+,""
+,"19"
+,{
+"salt":"FbUgHdzJ6GYjgB6g1K5Ieg"
+,"protected":"\/rjHx2KW8tGXtn9CzVVDvsBRQ-k6ZDqJtF_wAVfzCC0kYQ8PMiwAEUXM8bILWlypbpU66odDtZX3-A1YBcrOiWQ"
+,"rowVersion":"Kf_r6gxZjQ_gSmvWKgNEjvWoT0ND1A3GURTMefbEc5XxqBRhCSag1UzJ4O4rJj1KptYb0kCM9CrjhnrpHWIL6Q"
+,"fields":{
+"CNPJ":{
+"url":"\/ordsdw\/r\/sfi_apex\/anpcomvcpostos\/posto-geral?p08_cnpj_filtro=35298330000602\u0026clear=8\u0026session=5393182298754\u0026cs=1__EPuf2wPCd5l_dF9pzLwkqLFzjR5vWVm2mR8AMNG9lD88SPyKqG4rVNaMQMNiZ3nzHJzv_09PsQOhrLX5NWlA"
+}
+}
+}
+]
+,[
+"235196"
+,"24894827000154"
+,"24.894.827\/0001-54"
+,"JOC- COMERCIO DE COMBUSTIVEL EIRELI"
+,"POSTO ESPERANCA"
+,"VIBRA ENERGIA S.A"
+,"29\/11\/2016"
+,",567"
+,"Recebeu ,567% de outras distribuidoras"
+,"POSTO REVENDEDOR"
+,""
+,"EM OPERA\u00C7\u00C3O"
+,"EM OPERA\u00C7\u00C3O"
+,"RUA LEOPOLDO BRETANO,1907"
+,""
+,"NOSSA SENHORA DE NAZARE"
+,"59060490"
+,"NATAL"
+,"RN"
+,"-05,82128170"
+,"-35,23252830"
+,"PR\/RN0178427"
+,"ANP N\u00BA 1.402"
+,"RESOLU\u00C7\u00C3O ANP N\u00B0 41\/2013"
+,"48610011676201642"
+,"25\/11\/2016"
+,"29\/11\/2016"
+,"2"
+,"2"
+,"0"
+,"0"
+,"0"
+,"0"
+,"18"
+,"0"
+,"18"
+,"6159"
+,"-5,8212817"
+,"-35,2325283"
+,"5"
+,""
+,"9"
+,{
+"salt":"HtdWuqr14VYnAKlkuIgBDw"
+,"protected":"\/XLepDhkzzKMU_uq3QF7fOF-dCIy6Vk9ha3lHtTxM11VWrLtW59VarAlL3a5N33QRRnbEKQZez4ls94KTfOQyEA"
+,"rowVersion":"QTSUSYuW5hYXeUEpXA6t6r8V3SxvVhivPwYAPP7vmHwfzW3j0GzqNudNug39PBx7Ajc1ymz1SQIemxDbLNdgmA"
+,"fields":{
+"CNPJ":{
+"url":"\/ordsdw\/r\/sfi_apex\/anpcomvcpostos\/posto-geral?p08_cnpj_filtro=24894827000154\u0026clear=8\u0026session=5393182298754\u0026cs=19ranOqwEBphm7X3-MabxsnGY35kG5MvcTsEou7kMtQg9fWcPUYsOO6Xo63ZBaXQlm26-Gmj6hfmWoFLX0Y3ybQ"
+}
+}
+}
+]
+,[
+"269758"
+,"32543640000134"
+,"32.543.640\/0001-34"
+,"COMERCIO \u0026 DERIVADOS DE PETROLEO PLANALTO LTDA"
+,"POSTO TRANSVALE"
+,"IPIRANGA PRODUTOS DE PETR\u00D3LEO S.A"
+,"27\/1\/2020"
+,"5,112"
+,"Recebeu 5,112% de outras distribuidoras"
+,"POSTO REVENDEDOR"
+,""
+,"EM OPERA\u00C7\u00C3O"
+,"EM OPERA\u00C7\u00C3O"
+,"RUA MARCOS AUGUSTO TEIXEIRA DE CARVALHO FILHO,720"
+,""
+,"PLANALTO"
+,"59073350"
+,"NATAL"
+,"RN"
+,"-05,84700020"
+,"-35,25564920"
+,"PR\/RN0197311"
+,"ANP N\u00BA 56"
+,"RESOLU\u00C7\u00C3O ANP N\u00B0 41\/2013"
+,"48610000257202061"
+,"24\/1\/2020"
+,"27\/1\/2020"
+,"2"
+,"2"
+,"0"
+,"0"
+,"0"
+,"0"
+,"18"
+,"1"
+,"17"
+,"6189"
+,"-5,8470002"
+,"-35,2556492"
+,"5"
+,""
+,"6"
+,{
+"salt":"ROFSu7MEPC0gdps0bOuCWA"
+,"protected":"\/Oqsj4W2TyNaeAfFXehtZRwPcVKOEv8ZeYe4ijOmFL8fR3kbxY5E4ImZhNpnMlgW7qY5QegVHH5vPa2vqsvHaCg"
+,"rowVersion":"x4pZkWNRXqD4aUFlpkoMi8v8WoTatJtm7_ASQxuJzA7zvTi_G_NU9unVhXaUwJkR-fBTqu5bxzMRuMeY-obYfA"
+,"fields":{
+"CNPJ":{
+"url":"\/ordsdw\/r\/sfi_apex\/anpcomvcpostos\/posto-geral?p08_cnpj_filtro=32543640000134\u0026clear=8\u0026session=5393182298754\u0026cs=1uP7vHrN-SvwzEJys_PiIDnAv3tcdc61CT9QDv7GcOPu9dnN4JXTVu5aPNwPIfI5yxO0sPlouk8v3DwjtLG5tsQ"
+}
+}
+}
+]
+,[
+"25242"
+,"12689295000215"
+,"12.689.295\/0002-15"
+,"FLOR E OLIVEIRA LTDA"
+,""
+,"VIBRA ENERGIA S.A"
+,"1\/3\/2021"
+,"8,691"
+,"Recebeu 8,691% de outras distribuidoras"
+,"POSTO REVENDEDOR"
+,""
+,"EM OPERA\u00C7\u00C3O"
+,"EM OPERA\u00C7\u00C3O"
+,"AVENIDA GOV. TARCISIO DE VASCONCELOS MAIA,1450"
+,"A"
+,"CANDELARIA"
+,"59065780"
+,"NATAL"
+,"RN"
+,"-05,84214730"
+,"-35,22066240"
+,"PR\/RN0022175"
+,"ANP N\u00BA 189"
+,"PORTARIA ANP n\u00BA 116\/2000"
+,"48610003004200268"
+,""
+,"4\/3\/2002"
+,"2"
+,"2"
+,"0"
+,"0"
+,"0"
+,"0"
+,"15"
+,"0"
+,"15"
+,"6313"
+,"-5,8421473"
+,"-35,2206624"
+,"5"
+,""
+,"24"
+,{
+"salt":"mhXrR6FXAZReIeIvXEkXMQ"
+,"protected":"\/bU5d9YRcVp8VEl4MjzdcROEA9otw3GHk6h4EvNpqaX7xsBTObykRveoHFoscoC9L6PFNj1sB9RUwek8Ot3FtbQ"
+,"rowVersion":"zS6VH7MWMbUelkTPaNle16SNbyRByfS0KqWAao3_4YLxkMqSV5h88K615kKPkGWxBQ5LpCZBB91usBrArphqhQ"
+,"fields":{
+"CNPJ":{
+"url":"\/ordsdw\/r\/sfi_apex\/anpcomvcpostos\/posto-geral?p08_cnpj_filtro=12689295000215\u0026clear=8\u0026session=5393182298754\u0026cs=1GD7ueol6FQfEB79B-ormYCTpVipsPrRiP88AbpQyUa_N5YnLMH2-7jBuqASYRlW2p--opQGioOIrj_u5goAI2g"
+}
+}
+}
+]
+,[
+"25211"
+,"07193864000116"
+,"07.193.864\/0001-16"
+,"G.B. COMERCIO DE COMBUSTIVEIS LTDA"
+,"POSTO PREMIER"
+,"RAIZEN S.A."
+,"29\/4\/2005"
+,""
+,"Recebeu apenas da distribuidora"
+,"POSTO REVENDEDOR"
+,""
+,"EM OPERA\u00C7\u00C3O"
+,"EM OPERA\u00C7\u00C3O"
+,"AVENIDA SENADOR SALGADO FILHO,1552"
+,""
+,"TIROL"
+,"59022000"
+,"NATAL"
+,"RN"
+,"-05,81060780"
+,"-35,20441830"
+,"PR\/RN0185525"
+,"ANP N\u00BA 417"
+,"PORTARIA ANP n\u00BA 116\/2000"
+,"48610002747200563"
+,"29\/4\/2005"
+,"4\/5\/2005"
+,"2"
+,"2"
+,"0"
+,"0"
+,"0"
+,"0"
+,"15"
+,"0"
+,"15"
+,"6321"
+,"-5,8106078"
+,"-35,2044183"
+,"5"
+,""
+,"21"
+,{
+"salt":"SqhQZN69-b1QPkTEtPfDag"
+,"protected":"\/XvcZxWE5lbSIZWFIIC2dqz-pU6YPvjv_NGJF7M8ny0Rs9EHevCWcDMzrEkADyzy4piaC-24bqrF_E5kOC0vZFQ"
+,"rowVersion":"kHAjkhBHr8codOQvwz_ATarfoAS5DIl5efriQtahasss8VyaKgnGXiQlmRUAgVhxJ_hDbOBRKoHm_Hq2u_717A"
+,"fields":{
+"CNPJ":{
+"url":"\/ordsdw\/r\/sfi_apex\/anpcomvcpostos\/posto-geral?p08_cnpj_filtro=07193864000116\u0026clear=8\u0026session=5393182298754\u0026cs=14fQFvu--9M9_HwywBpVD3JJlPpuGDiQ0_b6WzZ6Df8mwg_nZJ45b4rwoVuaxr3B7DyMda5dH1LreUJ_1GR82cA"
+}
+}
+}
+]
+,[
+"25272"
+,"40804791000127"
+,"40.804.791\/0001-27"
+,"POSTO MONTE BELO COM\u00C9RCIO DE COMBUST\u00CDVEIS LTDA."
+,"POSTO MONTE BELO"
+,"VIBRA ENERGIA S.A"
+,"14\/2\/2003"
+,""
+,"Recebeu apenas da distribuidora"
+,"POSTO REVENDEDOR"
+,""
+,"EM OPERA\u00C7\u00C3O"
+,"EM OPERA\u00C7\u00C3O"
+,"AVENIDA DAS ALAGOAS,358"
+,""
+,"NE\u00D3POLIS"
+,"59086200"
+,"NATAL"
+,"RN"
+,"-05,86337167"
+,"-35,21237500"
+,"PR\/RN0030852"
+,"ANP N\u00BA 218"
+,"PORTARIA ANP n\u00BA 116\/2000"
+,"48610011586200094"
+,""
+,"22\/2\/2003"
+,"2"
+,"2"
+,"0"
+,"0"
+,"0"
+,"0"
+,"15"
+,"0"
+,"15"
+,"6324"
+,"-5,86337167"
+,"-35,212375"
+,"5"
+,""
+,"23"
+,{
+"salt":"OaqDrxNPf4OkQy6jPI-RxA"
+,"protected":"\/-T4BwA54h10K3i1QmfdqF16DayJjgJJ9T3D3brEF0rVVAYkWoo161wlpRfOeNfC531qZPT9ubrt44fQ0bG-UAw"
+,"rowVersion":"duUkVSEfAFD-7TWb2CCBodqpttSwXwqmT8rewjq9iM3SR5pSOUV0w2qC-MWh-qS02w9PuwxSJGgmdt1D2xw0Zw"
+,"fields":{
+"CNPJ":{
+"url":"\/ordsdw\/r\/sfi_apex\/anpcomvcpostos\/posto-geral?p08_cnpj_filtro=40804791000127\u0026clear=8\u0026session=5393182298754\u0026cs=1OCV9DFi-wgA6C2Lz_qjq3IHJSFYr31tV-cZlL5NLEw4RSEX5oigBtvAjNKwCVwAPbFSNQ13p8ChtmtJV74hEag"
+}
+}
+}
+]
+,[
+"276186"
+,"35751096000104"
+,"35.751.096\/0001-04"
+,"MIGRA COMBUSTIVEIS LTDA"
+,""
+,"VIBRA ENERGIA S.A"
+,"8\/9\/2020"
+,"9,008"
+,"Recebeu 9,008% de outras distribuidoras"
+,"POSTO REVENDEDOR"
+,""
+,"EM OPERA\u00C7\u00C3O"
+,"EM OPERA\u00C7\u00C3O"
+,"AVENIDA ALMIRANTE ALEXANDRINO DE ALENCAR,593"
+,""
+,"ALECRIM"
+,"59030350"
+,"NATAL"
+,"RN"
+,"-05,79828300"
+,"-35,21290330"
+,"PR\/RN0201719"
+,"ANP N\u00BA 727"
+,"RESOLU\u00C7\u00C3O ANP N\u00B0 41\/2013"
+,"48610002718202031"
+,"3\/9\/2020"
+,"8\/9\/2020"
+,"2"
+,"2"
+,"0"
+,"0"
+,"0"
+,"0"
+,"15"
+,"0"
+,"15"
+,"6375"
+,"-5,798283"
+,"-35,2129033"
+,"5"
+,""
+,"6"
+,{
+"salt":"5lY8Ry5Nf-xKy7xJnsXjMw"
+,"protected":"\/i4lPbYa2g0nxJfUAr1QmNba667n7RTH6lTZ015ZodqZW7vcB0c6K0ak93Av6CEHfFQBurjdcwu7C--kVmTo_5w"
+,"rowVersion":"jGvA_xEFLRwvkDs4LBF8rof5DLSZ1hXFyWYeWh-Of5zRRApF_ASfZEVc6z0K0qVyXGeFKClIz9yCMTAUXKz-Ug"
+,"fields":{
+"CNPJ":{
+"url":"\/ordsdw\/r\/sfi_apex\/anpcomvcpostos\/posto-geral?p08_cnpj_filtro=35751096000104\u0026clear=8\u0026session=5393182298754\u0026cs=1ji45QW4vQwTfiwx3pG62m8OpZcSgbMnVRi4EzTsFOJRWHvc2g923AVIRhGuOTRUchs6BD7nNM463Uo17lRXLeA"
+}
+}
+}
+]
+,[
+"51672"
+,"40756983000377"
+,"40.756.983\/0003-77"
+,"POSTO OLINDA LTDA"
+,"POSTO OLINDA 6"
+,"RAIZEN S.A."
+,"16\/6\/2014"
+,""
+,"Recebeu apenas da distribuidora"
+,"POSTO REVENDEDOR"
+,""
+,"EM OPERA\u00C7\u00C3O"
+,"EM OPERA\u00C7\u00C3O"
+,"AVENIDA ENGENHEIRO ROBERTO FREIRE,1810"
+,""
+,"CAPIM MACIO"
+,"59082095"
+,"NATAL"
+,"RN"
+,"-05,85900450"
+,"-35,19489930"
+,"PR\/RN0000428"
+,"ANP N\u00BA 20"
+,"PORTARIA ANP n\u00BA 116\/2000"
+,"48610010212200051"
+,""
+,"19\/1\/2001"
+,"2"
+,"2"
+,"0"
+,"0"
+,"0"
+,"0"
+,"15"
+,"1"
+,"14"
+,"6468"
+,"-5,8590045"
+,"-35,1948993"
+,"5"
+,""
+,"25"
+,{
+"salt":"PrFbTz8YuJGmO46-ardNGQ"
+,"protected":"\/JLXQ4kb_z1egppir1JPKYM3lmmphKxuMGXG39nknlAacFTjDisDRrkwnStR_YJ8JGJ7G6JsStkmFXdcQnSHLAA"
+,"rowVersion":"Umj6y-MTVeBiHdQGP9Q65pBAU6qVgmLJykAeWWnq1spa7A7wXNQE2MrT2Ycx-4Tc2GdYhHVbjNSUhxqlZTYdxw"
+,"fields":{
+"CNPJ":{
+"url":"\/ordsdw\/r\/sfi_apex\/anpcomvcpostos\/posto-geral?p08_cnpj_filtro=40756983000377\u0026clear=8\u0026session=5393182298754\u0026cs=1p3_JhiBkbnhoF-8vjWV01SV5-l82_OKKyUzalXOs1sKlkUSL5AqFIh0zP_cj7deCj0PTL_fT9dKm2OQ0ID9zDg"
+}
+}
+}
+]
+,[
+"25188"
+,"24537292000164"
+,"24.537.292\/0001-64"
+,"POSTO BRASIL LTDA"
+,"POSTO BRASIL"
+,"BANDEIRA BRANCA"
+,"13\/6\/2017"
+,""
+,"Sem distribuidora associada"
+,"POSTO REVENDEDOR"
+,""
+,"EM OPERA\u00C7\u00C3O"
+,"EM OPERA\u00C7\u00C3O"
+,"AVENIDA PRESIDENTE BANDEIRA,1270"
+,""
+,"LAGOA SECA"
+,"59031200"
+,"NATAL"
+,"RN"
+,"-05,80912610"
+,"-35,21186150"
+,"PR\/RN0029786"
+,"ANP N\u00BA 08"
+,"PORTARIA ANP n\u00BA 116\/2000"
+,"48610014599200287"
+,""
+,"15\/1\/2003"
+,"2"
+,"2"
+,"0"
+,"0"
+,"0"
+,"0"
+,"14"
+,"0"
+,"14"
+,"6506"
+,"-5,8091261"
+,"-35,2118615"
+,"5"
+,""
+,"23"
+,{
+"salt":"uwBvJ3bFY9qrWnvdcla4kQ"
+,"protected":"\/GXuk_7m6mJXruj9jYSSdDfajgsfcI1HuXGmSI-0cgFOjeES_RSjS4H4gCgCp8K60GfdB3DVbRZ34LBQs-OA4ig"
+,"rowVersion":"OxjLMmW7ls0v4Txt6eBHbPduUEdNVa3RYYfMDKKDe6lFkzD_e64POqiYNv6doO5n4kK6Z6I6MHl_6WCAko8B7g"
+,"fields":{
+"CNPJ":{
+"url":"\/ordsdw\/r\/sfi_apex\/anpcomvcpostos\/posto-geral?p08_cnpj_filtro=24537292000164\u0026clear=8\u0026session=5393182298754\u0026cs=1brfTIR7W0HMrIHHAoE4I9r9RwzMjthW-DeNJ_XiNxqN5BCuvNqUHhjixULY7ilGznYfknnfNjOw4FyzW1QiE3g"
+}
+}
+}
+]
+,[
+"25298"
+,"08397499000124"
+,"08.397.499\/0001-24"
+,"POSTO SAO LUIZ LTDA"
+,"POSTO SAO LUIZ I"
+,"RAIZEN S.A."
+,"2\/10\/2023"
+,""
+,"Recebeu apenas da distribuidora"
+,"POSTO REVENDEDOR"
+,""
+,"EM OPERA\u00C7\u00C3O"
+,"EM OPERA\u00C7\u00C3O"
+,"AVENIDA SALGADO FILHO,2815"
+,""
+,"LAGOA NOVA"
+,"59078000"
+,"NATAL"
+,"RN"
+,"-05,82198890"
+,"-35,20886140"
+,"PR\/RN0243906"
+,"ANP N\u00BA 1.160"
+,"RESOLU\u00C7\u00C3O ANP N\u00B0 41\/2013"
+,"48610230622202311"
+,"29\/9\/2023"
+,"2\/10\/2023"
+,"2"
+,"2"
+,"0"
+,"0"
+,"0"
+,"0"
+,"13"
+,"0"
+,"13"
+,"6526"
+,"-5,8219889"
+,"-35,2088614"
+,"5"
+,""
+,"3"
+,{
+"salt":"Nh4ZRUQFa2FfSUds_-Ql6Q"
+,"protected":"\/nxEvOx2byIPHLCMXa0vCzqUSdXNBHHXxGfiAbY-RZZVzXPiJ9B1nIBqC-hViYaP1-W045d_K3BPP92Y_g8bmXg"
+,"rowVersion":"VYh4wrukfx1ssGl12nuo-hrlNm8FxYS0S1q4Z72EQhkJqXO1d-xXojYkK_pJWaFCL6ja7noanvJRhTMiAjiTdA"
+,"fields":{
+"CNPJ":{
+"url":"\/ordsdw\/r\/sfi_apex\/anpcomvcpostos\/posto-geral?p08_cnpj_filtro=08397499000124\u0026clear=8\u0026session=5393182298754\u0026cs=1MCSOWPfXMZmxRQYpPipHp57Hrk1xt7kHvwzS_txMbKfD6xag4c4sOcUH0vz4hs1lgmKmZ87ER7i8GG8U4eV5eQ"
+}
+}
+}
+]
+,[
+"25178"
+,"35298330000785"
+,"35.298.330\/0007-85"
+,"JVC COMERCIAL LTDA"
+,"POSTO CARAU"
+,"BANDEIRA BRANCA"
+,"5\/12\/2025"
+,""
+,"Sem distribuidora associada"
+,"POSTO REVENDEDOR"
+,""
+,"EM OPERA\u00C7\u00C3O"
+,"EM OPERA\u00C7\u00C3O"
+,"AVENIDA INDUSTRIAL JOAO FRANCISCO DA MOTTA,3459"
+,""
+,"FELIPE CAMARAO"
+,"59072480"
+,"NATAL"
+,"RN"
+,"-05,80531830"
+,"-35,23979830"
+,"PR\/RN0225264"
+,"ANP N\u00BA 214"
+,"PORTARIA ANP n\u00BA 116\/2000"
+,"48610002861200836"
+,"11\/3\/2008"
+,"14\/3\/2008"
+,"2"
+,"2"
+,"0"
+,"0"
+,"0"
+,"0"
+,"12"
+,"0"
+,"12"
+,"6729"
+,"-5,8053183"
+,"-35,2397983"
+,"5"
+,""
+,"18"
+,{
+"salt":"20R2PNSZsSDLhVCnwSLoKA"
+,"protected":"\/sweCn0Egopcfz7vAzls_wKsmTpbNaFa9qDG7zVTb9h4i-YNK2Zgi8RRSRrHSaNWxB6O6K8NOM4RaLhd_TYwu8w"
+,"rowVersion":"xHzFBkcsADYQQ3mwnGBFDTBGXniCtwnbdfvBA3pHq6gwYFyl2W02CetyQ37JnELtAvxuMY7w5gER1N8tunl-Lw"
+,"fields":{
+"CNPJ":{
+"url":"\/ordsdw\/r\/sfi_apex\/anpcomvcpostos\/posto-geral?p08_cnpj_filtro=35298330000785\u0026clear=8\u0026session=5393182298754\u0026cs=1lEUs-EKVaUPgSaQXtYyNN2r5ZNMQIByqczKlcjgedWmo60W6pRNcnd8cPMvD7x8S9EAb10TpoU9pYn6sXwaRmg"
+}
+}
+}
+]
+,[
+"149182"
+,"09317359000161"
+,"09.317.359\/0001-61"
+,"MAFRA E MAFRA COMERCIO VAREJISTA DE COMBUSTIVEL LTDA"
+,"POSTO 2002 ALECRIM"
+,"ALE COMBUSTIVEIS S.A."
+,"12\/1\/2023"
+,"17,94"
+,"Recebeu 17,94% de outras distribuidoras"
+,"POSTO REVENDEDOR"
+,""
+,"EM OPERA\u00C7\u00C3O"
+,"EM OPERA\u00C7\u00C3O"
+,"RUA PRESIDENTE SARMENTO,426"
+,""
+,"ALECRIM"
+,"59032400"
+,"NATAL"
+,"RN"
+,"-05,79690000"
+,"-35,22314833"
+,"PR\/RN0060588"
+,"ANP N\u00BA 824"
+,"PORTARIA ANP n\u00BA 116\/2000"
+,"48610008876200816"
+,"7\/8\/2008"
+,"12\/8\/2008"
+,"2"
+,"2"
+,"0"
+,"0"
+,"0"
+,"0"
+,"12"
+,"0"
+,"12"
+,"6877"
+,"-5,7969"
+,"-35,22314833"
+,"5"
+,""
+,"18"
+,{
+"salt":"Wd7s28XKK-ZO3D7rNRwO-w"
+,"protected":"\/2Otz7F1C_uUbZEszJtGGcmOvLiZ0eJzyLCjFUECkKHTLb4vJQU4pN38AgQ1edq_9CZOlTcGAuQm8ChpzN7O-eQ"
+,"rowVersion":"f4upI5tIRZ5_WpBnxSAL77Z7WvsSniFdCOzKzTVpKpYxtL0NDaNe39LOvQxYoI1O2lUO8oG84cMqtS5YGBJmKg"
+,"fields":{
+"CNPJ":{
+"url":"\/ordsdw\/r\/sfi_apex\/anpcomvcpostos\/posto-geral?p08_cnpj_filtro=09317359000161\u0026clear=8\u0026session=5393182298754\u0026cs=1jo8FzFArNdtqYGzDSnS8CiqDm0HWfQcbYod13IioSp-ZvupKDs1lxTwVQ82J6_V3_SqaOcR7jrCgeZl_G_EFsg"
+}
+}
+}
+]
+,[
+"25162"
+,"08693517000115"
+,"08.693.517\/0001-15"
+,"LUIZ FLOR \u0026 FILHOS LTDA"
+,"POSTO SAO LUIZ II"
+,"RAIZEN S.A."
+,"18\/5\/2011"
+,""
+,"Recebeu apenas da distribuidora"
+,"POSTO REVENDEDOR"
+,""
+,"EM OPERA\u00C7\u00C3O"
+,"EM OPERA\u00C7\u00C3O"
+,"AVENIDA PRUDENTE DE MORAIS,4476"
+,""
+,"LAGOA NOVA"
+,"59063200"
+,"NATAL"
+,"RN"
+,"-05,82094720"
+,"-35,21359110"
+,"PR\/RN0027253"
+,"ANP N\u00BA 575"
+,"PORTARIA ANP n\u00BA 116\/2000"
+,"48610010988200233"
+,""
+,"11\/9\/2002"
+,"2"
+,"2"
+,"0"
+,"0"
+,"0"
+,"0"
+,"12"
+,"1"
+,"11"
+,"6992"
+,"-5,8209472"
+,"-35,2135911"
+,"5"
+,""
+,"24"
+,{
+"salt":"WG45zqDATi4T3VfhzowSQg"
+,"protected":"\/fElt216KSaCBCv1YvFQ33F8Z7PMHCQfQoVt-EpXWTaDypsbK9ZGwPOCrEW-15u-7DGlv6rJ9ItNvgX0Fu_3c7g"
+,"rowVersion":"yKX7moZLwCFtPYqjVaDZmhVwb-GqrI17rNmd73ZwZhgpzWegxoBsnIjw5pqFxB82vlJ9jmpqpLqo3Hdj4MEvcA"
+,"fields":{
+"CNPJ":{
+"url":"\/ordsdw\/r\/sfi_apex\/anpcomvcpostos\/posto-geral?p08_cnpj_filtro=08693517000115\u0026clear=8\u0026session=5393182298754\u0026cs=1tlj_dSPfxiI8-FXlppQgNdCr-wt6bXlmA7BnrpfVkMGjp4eTDh95W2DSFXPGkr9I-8t5GgGNYYKvMfabruF54g"
+}
+}
+}
+]
+,[
+"25291"
+,"08547432000633"
+,"08.547.432\/0006-33"
+,"POSTO FREI DAMIAO LTDA"
+,""
+,"VIBRA ENERGIA S.A"
+,"4\/12\/2002"
+,"13,65"
+,"Recebeu 13,65% de outras distribuidoras"
+,"POSTO REVENDEDOR"
+,""
+,"EM OPERA\u00C7\u00C3O"
+,"EM OPERA\u00C7\u00C3O"
+,"AVENIDA CAPITAO MOR GOUVEIA,1807"
+,""
+,"NOSSA SENHORA DE NAZARE"
+,"59060400"
+,"NATAL"
+,"RN"
+,"-05,82115820"
+,"-35,23315150"
+,"PR\/RN0029590"
+,"ANP N\u00BA1022"
+,"PORTARIA ANP n\u00BA 116\/2000"
+,"48610014323200215"
+,""
+,"12\/12\/2002"
+,"2"
+,"2"
+,"0"
+,"0"
+,"0"
+,"0"
+,"12"
+,"1"
+,"11"
+,"7046"
+,"-5,8211582"
+,"-35,2331515"
+,"5"
+,""
+,"23"
+,{
+"salt":"hgHIlg4NB-lTEenKEaCgpQ"
+,"protected":"\/zmFqkaR6lFhLXuhMJwO8Jv1JZWVp9_1qEoMVfO8iQkSi4djO2JNtkN-7fxp3SPvS2T_ehBf6LjjW67E5vGs0kQ"
+,"rowVersion":"m27sVsdrxHV8ZxJzbJ3n28QFn-sGjz_hdgmglCRapqGjPUqg-3AdfE_TX2NWzC1Tl23TFQevZsuYqEWx8nryuw"
+,"fields":{
+"CNPJ":{
+"url":"\/ordsdw\/r\/sfi_apex\/anpcomvcpostos\/posto-geral?p08_cnpj_filtro=08547432000633\u0026clear=8\u0026session=5393182298754\u0026cs=14DIYP5mXFM6O9zk7jRYUbHT2RQunjVCvvVYJCU84Wu_fZ0kTrXyzqakgfqJzKLkBpe7bJWNpSp6Z8DAVOf9vLg"
+}
+}
+}
+]
+,[
+"193705"
+,"15302882000117"
+,"15.302.882\/0001-17"
+,"NOBREGA E MELO COMERCIO VAREJISTA DE COMBUSTIVEIS LTDA"
+,""
+,"BANDEIRA BRANCA"
+,"15\/10\/2012"
+,""
+,"Sem distribuidora associada"
+,"POSTO REVENDEDOR"
+,""
+,"EM OPERA\u00C7\u00C3O"
+,"EM OPERA\u00C7\u00C3O"
+,"AVENIDA DAS FRONTEIRA,2370"
+,"LOTE  109"
+,"NOSSA SRA DA APRESENTCAO"
+,"59114035"
+,"NATAL"
+,"RN"
+,"-05,75953570"
+,"-35,26450480"
+,"PR\/RN0117502"
+,"ANP N\u00BA 1163"
+,"PORTARIA ANP n\u00BA 116\/2000"
+,"48610008614201220"
+,"4\/10\/2012"
+,"15\/10\/2012"
+,"2"
+,"2"
+,"0"
+,"0"
+,"0"
+,"0"
+,"12"
+,"1"
+,"11"
+,"7064"
+,"-5,7595357"
+,"-35,2645048"
+,"5"
+,""
+,"14"
+,{
+"salt":"TXjbY7NX0YiRchlngHAUlg"
+,"protected":"\/XczZpSJ34KUn3FwZjd0Rs_J1ehiw9HpkA1MuneC1q5VsETEAyqB5JAfSLaP0zNlmy0_ZuUSQ8rV9WhngqZ0i-Q"
+,"rowVersion":"3xz_zUTmIGPERO0aZ_UKl-fNBzZZ_-g_63rdyntBasCXAbJfAXeEOn9FuIaku32FUvNifl_uf9yEO0UgTMdddQ"
+,"fields":{
+"CNPJ":{
+"url":"\/ordsdw\/r\/sfi_apex\/anpcomvcpostos\/posto-geral?p08_cnpj_filtro=15302882000117\u0026clear=8\u0026session=5393182298754\u0026cs=1MOooIZbrolHQ3xW-XUGX-0GD4Z9P3Srs9DA7oUoNf5BcQGYf8QJlPiBn203T_lQy9Tziw8J8jUTLtBdgJrZ6Fw"
+}
+}
+}
+]
+,[
+"320695"
+,"57869472000100"
+,"57.869.472\/0001-00"
+,"BERNARDO VIEIRA COMERCIO DE COMBUSTIVEL DOMINGOS LTDA"
+,"REDE DE POSTOS DOMINGOS"
+,"SETTA COMBUSTIVEIS LTDA"
+,"7\/2\/2025"
+,"6,567"
+,"Recebeu 6,567% de outras distribuidoras"
+,"POSTO REVENDEDOR"
+,""
+,"EM OPERA\u00C7\u00C3O"
+,"EM OPERA\u00C7\u00C3O"
+,"AVENIDA NEVALDO ROCHA,627"
+,""
+,"QUINTAS"
+,"59035015"
+,"NATAL"
+,"RN"
+,"-05,80225470"
+,"-35,23292638"
+,"PR\/RN0248969"
+,"ANP N\u00BA 145"
+,"RESOLU\u00C7\u00C3O ANP N\u00B0 948\/2023"
+,"48610202565202534"
+,"6\/2\/2025"
+,"7\/2\/2025"
+,"2"
+,"2"
+,"0"
+,"0"
+,"0"
+,"0"
+,"9"
+,"0"
+,"9"
+,"7257"
+,"-5,8022547"
+,"-35,23292638"
+,"5"
+,""
+,"1"
+,{
+"salt":"ppzxI_Q0tNO1YY_q_-blFA"
+,"protected":"\/nkuq0z5izzZ-g1BztchTkgRvKKkHuS6Yc63zar01A-ZLEGeKA-pkshDjtFOdIQeQUSi5chtKzYBOmuo_aOO6BA"
+,"rowVersion":"u7SYshqtjsOsiOmKbNXcwLmZWplMAFWpTtpSXI-8QmHrOB7vnFl7AmS4nhYLiEJMXXfSk8TGFIDNUysHCJXMLg"
+,"fields":{
+"CNPJ":{
+"url":"\/ordsdw\/r\/sfi_apex\/anpcomvcpostos\/posto-geral?p08_cnpj_filtro=57869472000100\u0026clear=8\u0026session=5393182298754\u0026cs=1fkCTYuF_2luYvo2p2Xnfr8KDp6XVC4H2xnWpnOGfTaiVInyr--x1MSnvtSh5YJYhjQoi1l9ysY3mAfPLChtKXA"
+}
+}
+}
+]
+,[
+"25190"
+,"35304542000809"
+,"35.304.542\/0008-09"
+,"CIRNE PNEUS COMERCIO E SERVICOS LTDA"
+,"CIRNE POSTOS"
+,"BANDEIRA BRANCA"
+,"7\/2\/2019"
+,""
+,"Sem distribuidora associada"
+,"POSTO REVENDEDOR"
+,""
+,"EM OPERA\u00C7\u00C3O"
+,"EM OPERA\u00C7\u00C3O"
+,"AVENIDA DEPUTADO ANTONIO FLORENCIO DE QUEIROZ,3046"
+,""
+,"PONTA NEGRA"
+,"59092500"
+,"NATAL"
+,"RN"
+,"-05,89023690"
+,"-35,18039350"
+,"PR\/RN0205506"
+,"ANP N. 16"
+,"PORTARIA ANP n\u00BA 116\/2000"
+,"48610000072200781"
+,"5\/1\/2007"
+,"11\/1\/2007"
+,"2"
+,"2"
+,"0"
+,"0"
+,"0"
+,"0"
+,"9"
+,"0"
+,"9"
+,"7474"
+,"-5,8902369"
+,"-35,1803935"
+,"5"
+,""
+,"19"
+,{
+"salt":"SU9oC5iqdtCPTP5xZA-ueg"
+,"protected":"\/MWjisn4LWWh3ruDO88xAnrL7DcDlSlRsfeG2_d96ZoIQnqDnjNtiVDnvZ10vk7rQuaSsGTIvd-aY0UmJl6Ugbw"
+,"rowVersion":"vgHdhnCRf5pdWP7ooXHOmLb5IPIDNXZLfOuht8vEvZVXza6GsJVIUJK6dWFLcK8MZfV8h2fPO6EvkmR2b2ib8w"
+,"fields":{
+"CNPJ":{
+"url":"\/ordsdw\/r\/sfi_apex\/anpcomvcpostos\/posto-geral?p08_cnpj_filtro=35304542000809\u0026clear=8\u0026session=5393182298754\u0026cs=16Jn7DNiF-TFHcslISKrF3CVhxTllrJ1IxDSvO9TwACkP7z80wBWYgbtIG4jDP7nGL2Bq5UV4fbdX7G01oZ09cw"
+}
+}
+}
+]
+,[
+"161188"
+,"10776048000140"
+,"10.776.048\/0001-40"
+,"PINHEIRO E FILHO COMERCIO DE COMBUSTIVEIS E DERIVADOS DE PETROLEO LTDA"
+,"POSTO PINHEIRO"
+,"BANDEIRA BRANCA"
+,"30\/5\/2016"
+,""
+,"Sem distribuidora associada"
+,"POSTO REVENDEDOR"
+,""
+,"EM OPERA\u00C7\u00C3O"
+,"EM OPERA\u00C7\u00C3O"
+,"RUA CIDADE DO SOL,2167"
+,""
+,"PITIMBU"
+,"59067720"
+,"NATAL"
+,"RN"
+,"-05,87090970"
+,"-35,22205190"
+,"PR\/RN0078307"
+,"ANP N\u00BA 2110"
+,"PORTARIA ANP n\u00BA 116\/2000"
+,"48610014250200911"
+,"24\/11\/2009"
+,"27\/11\/2009"
+,"2"
+,"2"
+,"0"
+,"0"
+,"0"
+,"0"
+,"9"
+,"0"
+,"9"
+,"7565"
+,"-5,8709097"
+,"-35,2220519"
+,"5"
+,""
+,"16"
+,{
+"salt":"D_5gtJKnfIYgizl8D-Kiww"
+,"protected":"\/oDJMNYPKhM6CF6zeeXwe_tNdB34RqUlKQMHI0ESNLtoOB2yLpugXO7-LarbRinQwvAA_0M4o_aKkKddSdoEhJw"
+,"rowVersion":"XUAt8_Y7KF2o2ZR2mBiCj8f7SlORWqhmHh2t9kIQquESV6NtsWK0TMqAOC1oorDgq-ee4d-Hdm5c8RY3sIYAcg"
+,"fields":{
+"CNPJ":{
+"url":"\/ordsdw\/r\/sfi_apex\/anpcomvcpostos\/posto-geral?p08_cnpj_filtro=10776048000140\u0026clear=8\u0026session=5393182298754\u0026cs=1sdvzrFY7XSTeWtZfXxq3jxq6M-NiBJJ7pOI_B-WZkjdaAl5yTcjq2jPTzEUIbiiXNlz5nulmqLwKxLyjM5YTFw"
+}
+}
+}
+]
+,[
+"25343"
+,"03459547000148"
+,"03.459.547\/0001-48"
+,"SM COMERCIAL DE DERIVADOS DE PETROLEO LTDA"
+,"AUTO POSTO PITIMBU"
+,"BANDEIRA BRANCA"
+,"1\/11\/2024"
+,""
+,"Sem distribuidora associada"
+,"POSTO REVENDEDOR"
+,""
+,"EM OPERA\u00C7\u00C3O"
+,"EM OPERA\u00C7\u00C3O"
+,"RUA MARANATA,425"
+,""
+,"PLANALTO"
+,"59073240"
+,"NATAL"
+,"RN"
+,"-05,85821667"
+,"-35,25228333"
+,"PR\/RN0001599"
+,"ANP N\u00BA 814"
+,"PORTARIA ANP n\u00BA 116\/2000"
+,"48610008924200019"
+,""
+,"13\/11\/2000"
+,"2"
+,"2"
+,"0"
+,"0"
+,"0"
+,"0"
+,"9"
+,"0"
+,"9"
+,"7596"
+,"-5,85821667"
+,"-35,25228333"
+,"5"
+,""
+,"25"
+,{
+"salt":"vBgI4vOcP_6pj1fU41bI8w"
+,"protected":"\/BcNA_lFENlWlZklr_0eBEYbXWjFpFfLF7lc9Sa0AJ8GzDj6zYIbL0lI0wnVJ_Tw0FTOgBHzr0mTZI8nAgBbx-w"
+,"rowVersion":"wgeK15nNJ1bXt2VWa7jjVlVcgqhJsn3Ylrm7NAvT_doyCeLc6rDvZh2eQsrnG_Ow_cX5s1wwrzFxGJBQKV4h7A"
+,"fields":{
+"CNPJ":{
+"url":"\/ordsdw\/r\/sfi_apex\/anpcomvcpostos\/posto-geral?p08_cnpj_filtro=03459547000148\u0026clear=8\u0026session=5393182298754\u0026cs=1io_iYmq4Mn6SoHKQGddukHgPb7eGzgk-4jbzLWi15B3B6V6cNIE9KpEEwgiylDcYU6RyrujaAE0iNNo-6U1P2w"
+}
+}
+}
+]
+,[
+"271618"
+,"23423005000394"
+,"23.423.005\/0003-94"
+,"REVENDEDORA DE COMBUST\u00CDVEIS POTENGI LTDA"
+,"POSTO POTENGI"
+,"ALE COMBUSTIVEIS S.A."
+,"26\/3\/2020"
+,"7,747"
+,"Recebeu 7,747% de outras distribuidoras"
+,"POSTO REVENDEDOR"
+,""
+,"EM OPERA\u00C7\u00C3O"
+,"EM OPERA\u00C7\u00C3O"
+,"AVENIDA DAS FRONTEIRAS,1000"
+,"LOTE  62"
+,"POTENGI"
+,"59129200"
+,"NATAL"
+,"RN"
+,"-05,75800050"
+,"-35,26379470"
+,"PR\/RN0198514"
+,"ANP N\u00BA 272"
+,"RESOLU\u00C7\u00C3O ANP N\u00B0 41\/2013"
+,"48610001641202081"
+,"25\/3\/2020"
+,"26\/3\/2020"
+,"2"
+,"2"
+,"0"
+,"0"
+,"0"
+,"0"
+,"9"
+,"1"
+,"8"
+,"7832"
+,"-5,7580005"
+,"-35,2637947"
+,"5"
+,""
+,"6"
+,{
+"salt":"CpxQhCNISHrltUudPhO8KQ"
+,"protected":"\/-yaWdEhLDjn5BB_KE3RGnt3LFKcV9Gm9qUI7h8tsry-Znxeua5B_f82qWGn1dV4DIYeJmwFG9yXoTukxxkDnPw"
+,"rowVersion":"pOpLUMIjL82LOrQO1yISpDExcTLQUr4wMpjpNShMGm-GCnYXXWPQSVEU-OVxbpnQqqB7psC4xecGyj40jOpKmQ"
+,"fields":{
+"CNPJ":{
+"url":"\/ordsdw\/r\/sfi_apex\/anpcomvcpostos\/posto-geral?p08_cnpj_filtro=23423005000394\u0026clear=8\u0026session=5393182298754\u0026cs=17VENDPqbQQhZopeHnDhbaSgcdwB1i2sLZgCIepOqEqNoYdR37QRT7upnn_0BIc8rtjYpJigBIh6qON7HLjH5gw"
+}
+}
+}
+]
+,[
+"307826"
+,"42363901000198"
+,"42.363.901\/0001-98"
+,"ROMUALDO GALVAO COMERCIO DE COMBUSTIVEIS DOMINGOS LTDA"
+,"REDE DE POSTOS DOMINGOS"
+,"BANDEIRA BRANCA"
+,"28\/11\/2024"
+,""
+,"Sem distribuidora associada"
+,"POSTO REVENDEDOR"
+,""
+,"EM OPERA\u00C7\u00C3O"
+,"EM OPERA\u00C7\u00C3O"
+,"AVENIDA ROMUALDO GALVAO,1388"
+,""
+,"LAGOA NOVA"
+,"59056105"
+,"NATAL"
+,"RN"
+,"-05,81203526"
+,"-35,20810913"
+,"PR\/RN0243842"
+,"ANP N\u00BA 1.114"
+,"RESOLU\u00C7\u00C3O ANP N\u00B0 41\/2013"
+,"48610230598202311"
+,"25\/9\/2023"
+,"26\/9\/2023"
+,"2"
+,"2"
+,"0"
+,"0"
+,"0"
+,"0"
+,"6"
+,"1"
+,"5"
+,"9050"
+,"-5,81203526"
+,"-35,20810913"
+,"5"
+,""
+,"3"
+,{
+"salt":"A1A5ktXBh_xdPqrR7CVmwQ"
+,"protected":"\/rO5ca2qwF-tMpfaNta6FGI5fydxxFboWvZgtEKtE1KtltIs3dGf5yG9jMhOmQw4cRmTi8hXimJFzkiArZoEH8A"
+,"rowVersion":"icZZ1_2kEj6ftRSF0h8BYXmemCnnCUF4q-2Rd0OVLBRUJtcdFs_N34HA9EztmxFNqN2i6qgwYXFZx11vu_pqnQ"
+,"fields":{
+"CNPJ":{
+"url":"\/ordsdw\/r\/sfi_apex\/anpcomvcpostos\/posto-geral?p08_cnpj_filtro=42363901000198\u0026clear=8\u0026session=5393182298754\u0026cs=1S2mC3YZ4nVOhgOc7-oJvxhJEzCVG4Ivb9ionSI8IlBglfj_GMj-XPdD5xfrMJ10r4fn18U0wcRc1Qc0rMoz2gg"
+}
+}
+}
+]
+,[
+"25279"
+,"24206617000800"
+,"24.206.617\/0008-00"
+,"PARELHAS GAS LTDA"
+,""
+,"VIBRA ENERGIA S.A"
+,"21\/3\/2001"
+,""
+,"Recebeu apenas da distribuidora"
+,"POSTO REVENDEDOR"
+,""
+,"EM OPERA\u00C7\u00C3O"
+,"EM OPERA\u00C7\u00C3O"
+,"AVENIDA SENADOR SALGADO FILHO,411"
+,""
+,"MIRASSOL"
+,"59078000"
+,"NATAL"
+,"RN"
+,"-05,84331050"
+,"-35,20901720"
+,"PR\/RN0005906"
+,"ANP N\u00BA 381"
+,"PORTARIA ANP n\u00BA 116\/2000"
+,"48610004249200121"
+,""
+,"4\/4\/2001"
+,"1"
+,"1"
+,"0"
+,"0"
+,"0"
+,"0"
+,"27"
+,"0"
+,"27"
+,"11815"
+,"-5,8433105"
+,"-35,2090172"
+,"5"
+,""
+,"25"
+,{
+"salt":"hnJG1rQ5CYEdSFnHMJhznw"
+,"protected":"\/eLRUqnkj8vqwO6WIeLoxdcB7PVumQP-hhY11pONpPV0p_tSiTP6hkwjbsmcCoo8FNuZKe1oYmaw7J1741biV5g"
+,"rowVersion":"0Fb8wHSbgZ_s_PHdG4PrgUTKmdwJ3RV8FTQ22hoRqGrLH17MHN1T7i4-zewnm54AJa9TyEazA6F96jUZNqLkAw"
+,"fields":{
+"CNPJ":{
+"url":"\/ordsdw\/r\/sfi_apex\/anpcomvcpostos\/posto-geral?p08_cnpj_filtro=24206617000800\u0026clear=8\u0026session=5393182298754\u0026cs=1741_hDDFHvoEZn1SJcnSd0PA2VhSlSo3WkavjjzTpk2T_N8yTOV1tINokVKM6xRezXv5cwQvPtlXIVdHp7Q5EA"
+}
+}
+}
+]
+,[
+"25290"
+,"08547432000714"
+,"08.547.432\/0007-14"
+,"POSTO FREI DAMIAO LTDA"
+,"POSTO FREI DAMI\u00C3O"
+,"VIBRA ENERGIA S.A"
+,"28\/7\/2021"
+,"7,377"
+,"Recebeu 7,377% de outras distribuidoras"
+,"POSTO REVENDEDOR"
+,""
+,"EM OPERA\u00C7\u00C3O"
+,"EM OPERA\u00C7\u00C3O"
+,"RUA DOUTOR NAPOLE\u00C3O LAUREANO,4330"
+,"0"
+,"QUINTAS"
+,"59050480"
+,"NATAL"
+,"RN"
+,"-05,82057500"
+,"-35,25224000"
+,"PR\/RN0030097"
+,"ANP N\u00BA 840"
+,"PORTARIA ANP n\u00BA 116\/2000"
+,"48610000276200397"
+,"27\/7\/2021"
+,"28\/7\/2021"
+,"1"
+,"1"
+,"0"
+,"0"
+,"0"
+,"0"
+,"21"
+,"0"
+,"21"
+,"12073"
+,"-5,820575"
+,"-35,25224"
+,"5"
+,""
+,"5"
+,{
+"salt":"iqP9RnIRC8LTVm3B40FZXA"
+,"protected":"\/OW2-ruXgreRK03IpCU8nTxYpij_xHupryHMBtJul9J5r0jqf5zagqdWRq3Wh3fcmPPt-jLgFocqs14CHTLegjQ"
+,"rowVersion":"28neCgKk7hixeiVv_4dpsSqZvPDvkm_JyeX-k-DhvAvrbn0VueUamwDEG5nCjj6jFIeIButjt3MJAxb_70SmRQ"
+,"fields":{
+"CNPJ":{
+"url":"\/ordsdw\/r\/sfi_apex\/anpcomvcpostos\/posto-geral?p08_cnpj_filtro=08547432000714\u0026clear=8\u0026session=5393182298754\u0026cs=1jD5iFttcDuCmYU9rCphBlSk51nXbfqP7pqxEoZ_SrI4_6BeL6WDNMfcjWfD1k0qpIUjCpW_9HawzdDu4ZfEwFQ"
+}
+}
+}
+]
+,[
+"25340"
+,"03573911000104"
+,"03.573.911\/0001-04"
+,"COMERCIAL SOBRAL LTDA"
+,"POSTO ALVORADA"
+,"BANDEIRA BRANCA"
+,"20\/8\/2019"
+,""
+,"Sem distribuidora associada"
+,"POSTO REVENDEDOR"
+,""
+,"EM OPERA\u00C7\u00C3O"
+,"EM OPERA\u00C7\u00C3O"
+,"AVENIDA JOAO MEDEIROS FILHO,3960"
+,""
+,"REDINHA"
+,"59122200"
+,"NATAL"
+,"RN"
+,"-05,75267560"
+,"-35,23536140"
+,"PR\/RN0023120"
+,"ANP N\u00BA 210"
+,"PORTARIA ANP n\u00BA 116\/2000"
+,"48610003885200217"
+,""
+,"8\/3\/2002"
+,"1"
+,"1"
+,"0"
+,"0"
+,"0"
+,"0"
+,"20"
+,"0"
+,"20"
+,"12085"
+,"-5,7526756"
+,"-35,2353614"
+,"5"
+,""
+,"24"
+,{
+"salt":"G7YCydq2jOr7VnZQfcHzbw"
+,"protected":"\/TbJszFIOKA9ON2m2ABO547KL52sIjHcf5qLjYMpiftjs04iTji2__KKsRG5EZIBkiFn9c-d2Ph0SIEEexAMJ0A"
+,"rowVersion":"XctshY_y60PCQG0gNqM9DWyAfoTvukN9alqQPgVOnNsK1mEax73ML2tCFODBHzaP0libaGwSSsP_XaJfDd-eKQ"
+,"fields":{
+"CNPJ":{
+"url":"\/ordsdw\/r\/sfi_apex\/anpcomvcpostos\/posto-geral?p08_cnpj_filtro=03573911000104\u0026clear=8\u0026session=5393182298754\u0026cs=1ptI4WDOJ1HGm9bil8ZU5GxkQrdj7iNrvr5zcyHoiIsDBrcflHWzN10PSu446qFErXdxSK1NYS-e3egV2YUER6w"
+}
+}
+}
+]
+]
+,"firstRow":1
+,"moreData":true
+,"totalRows":106
+}
+;
+</script>
+Postos autorizados pela ANP</div>
+  <div class="t-ContentBlock-buttons"></div>
+</div>
+<input type="hidden" name="P5_MUNICIPIO" id="P5_MUNICIPIO" value="NATAL"><input type="hidden" data-for="P5_MUNICIPIO" value="R8xzOOirbrw0UNEa47ivG_hGMhN4P18ieBp4IkjMEGcKQxN2ZLeLfCmRowKnP7Q6X0WRfR-y_uiTLFgpnjvJgg"><input type="hidden" name="P5_UF" id="P5_UF" value="RN"><input type="hidden" data-for="P5_UF" value="oqmRSc0oBKHCwXuj4dgzPR5lScAxOPLuoP9Re_MdfsZB7L_mu1fikdDbd4scTyTjwecHoPmg4p6bQnTOvTsyEQ"></div>
+</div><div class="row ">
+<div class="col col-12 apex-col-auto col-start col-end" ><button class="t-Button botoes" type="button"   id="B38343648292548139" data-otel-label="Voltar"><span class="t-Button-label">Voltar</span></button></div>
+</div>
+</div></div>
+      </main>
+      <footer class="t-Footer padding-none" id="t_Footer" role="contentinfo">
+
+        <div class="contatoANP u-flex">
+            <div class="u-flex-grow-0" style="width:124px">&nbsp; </div>
+            <div class="u-pullLeft u-flex-grow-1">Em caso de dúvidas na utilização do sistema, entre em contato com a Ouvidoria da ANP - Telefone 0800 - 970 0267
+            </div>
+            <div class="u-pullRight u-flex-grow-0"><img src="r/sfi_apex/204/files/static/v186/image/logo-anp-negativo.png" alt="Logo ANP" width="124" height="37"></div>
+
+        </div>
+
+
+        <div class="copyright u-flex">
+            <div class="u-flex-grow-0" style="width:90px">&nbsp;</div>
+            <div class="u-pullLeft u-flex-grow-1">© 2026 <a href="https://www.gov.br/anp" target="blank">Agência Nacional do Petróleo, Gás Natural e Biocombustíveis</a>. Todos direitos reservados. </div>
+            <div class="u-pullRight u-flex-grow-0">Release 2.1</div>
+        </div>
+
+
+      </footer>
+    </div>
+  </div>
+</div>
+<div class="t-Body-inlineDialogs" id="t_Body_inlineDialogs"></div><input type="hidden" id="pPageFormRegionChecksums" value="&#x5B;&#x5D;">
+<input type="hidden" id="pPageItemsRowVersion" value="" /><input type="hidden" id="pPageItemsProtected" value="UDVfTVVOSUNJUElPOlA1X1VG&#x2F;HWgD67zQCc2YZbwr8GAytdIolSJtATaGoz6HT_V4EFvuIg29X5vxgOQfXjj_TLqr2Cinh5Xi5CqTbNRT45G1LA" /></form>
+
+
+<script nonce="BNhTrLLNiZmfNNSXrJduNQ">
+var apex_img_dir = "\u002Fapex24_2\u002F";
+var apex = {env: {APP_USER: "nobody",APP_ID: "204",APP_PAGE_ID: "5",APP_SESSION: "5393182298754",APP_FILES: "r\u002Fsfi_apex\u002F204\u002Ffiles\u002Fstatic\u002Fv186\u002F",WORKSPACE_FILES: "r\u002Fsfi_apex\u002Ffiles\u002Fstatic\u002Fv1\u002F",APEX_VERSION: "24.2.13",APEX_BASE_VERSION: "24.2",COMPATIBILITY_MODE: 24.2,NONCE: "BNhTrLLNiZmfNNSXrJduNQ"},
+libVersions:{cropperJs:"1.6.2",domPurify:"3.2.4",fontapex:"2.4",fullcalendar:"6.1.15",hammer:"2.0.8",jquery:"3.6.4",jqueryUi:"1.13.2",maplibre:"4.6.0",mapboxGlRtlText:"0.3.0",markedJs:"14.1.2",prismJs:"1.30.0",oraclejet:"17.0.2",turndown:"7.2.2",monacoEditor:"0.51.0",lessJs:"4.2.0"}};
+</script>
+<script nonce="BNhTrLLNiZmfNNSXrJduNQ" src="/apex24_2/libraries/apex/minified/desktop_all.min.js?v=24.2.13"></script>
+<script nonce="BNhTrLLNiZmfNNSXrJduNQ" src="wwv_flow.js_messages?p_app_id=204&p_lang=pt-br&p_version=24.2.13-6129336796412&p_nls_settings=eyJudW1lcmljQ2hhcmFjdGVycyI6IiwuIiwiY3VycmVuY3kiOiJSJCIsImlzb0N1cnJlbmN5IjoiQlJBWklMIiwiZHVhbEN1cnJlbmN5IjoiQ3IkIn0"></script>
+<script nonce="BNhTrLLNiZmfNNSXrJduNQ" src="wwv_flow.js_dialogs?p_app_id=204&p_version=24.2.13-6129336796412"></script>
+
+
+<script nonce="BNhTrLLNiZmfNNSXrJduNQ" src="/apex24_2/themes/theme_42/24.2/js/theme42.min.js?v=24.2.13"></script>
+
+
+
+  
+
+
+
+<script nonce="BNhTrLLNiZmfNNSXrJduNQ" src="/apex24_2/libraries/apex/minified/modelViewBase.min.js?v=24.2.13"></script>
+<script nonce="BNhTrLLNiZmfNNSXrJduNQ" src="/apex24_2/libraries/apex/minified/widget.toolbar.min.js?v=24.2.13"></script>
+<script nonce="BNhTrLLNiZmfNNSXrJduNQ" src="/apex24_2/libraries/apex/minified/widget.stickyWidget.min.js?v=24.2.13"></script>
+<script nonce="BNhTrLLNiZmfNNSXrJduNQ" src="/apex24_2/libraries/apex/minified/widget.grid.min.js?v=24.2.13"></script>
+<script nonce="BNhTrLLNiZmfNNSXrJduNQ" src="/apex24_2/libraries/apex/minified/widget.splitter.min.js?v=24.2.13"></script>
+<script nonce="BNhTrLLNiZmfNNSXrJduNQ" src="/apex24_2/libraries/apex/minified/widget.recordView.min.js?v=24.2.13"></script>
+<script nonce="BNhTrLLNiZmfNNSXrJduNQ" src="/apex24_2/libraries/apex/minified/widget.iconList.min.js?v=24.2.13"></script>
+<script nonce="BNhTrLLNiZmfNNSXrJduNQ" src="/apex24_2/libraries/apex/minified/widget.combobox.min.js?v=24.2.13"></script>
+<script nonce="BNhTrLLNiZmfNNSXrJduNQ" src="/apex24_2/libraries/apex/minified/item.Colorpicker.min.js?v=24.2.13"></script>
+
+<script nonce="BNhTrLLNiZmfNNSXrJduNQ" src="/apex24_2/libraries/oraclejet/17.0.2/js/libs/require/require.js?v=24.2.13"></script>
+<script nonce="BNhTrLLNiZmfNNSXrJduNQ" src="/apex24_2/libraries/apex/minified/requirejs.jetConfig.min.js?v=24.2.13"></script>
+<script nonce="BNhTrLLNiZmfNNSXrJduNQ" src="/apex24_2/libraries/apex/minified/jetCommonBundle.min.js?v=24.2.13"></script>
+<script nonce="BNhTrLLNiZmfNNSXrJduNQ" src="/apex24_2/libraries/apex/minified/widget.interactiveGrid.min.js?v=24.2.13"></script>
+<script nonce="BNhTrLLNiZmfNNSXrJduNQ">
+apex.jQuery( function() {
+apex.page.init( this, function() {
+try {
+(function(){var ig$=apex.jQuery('#R38277306105099103_ig');ig$.interactiveGrid({"config":{"columns":[{"id":"38277415647099105","name":"COD_INSTALACAO","staticId":"C38277415647099105","dataType":"NUMBER","isHidden":true},{"id":"41660231121519328","name":"CNPJ","staticId":"C41660231121519328","heading":{"heading":"Selecionar","alignment":"start"},"link":{"text":"\u003Cimg src=\u0022\u002Fapex24_2\u002Fapp_ui\u002Fimg\u002Ficons\u002Fapex-edit-view.png\u0022 class=\u0022apex-edit-view\u0022 alt=\u0022\u0022\u003E"}},{"id":"38277703060099107","name":"CNPJ_TXT","staticId":"C38277703060099107","heading":{"heading":"CNPJ","alignment":"start"},"validation":{"isRequired":true},"accessibility":{"usedAsRowHeader":true}},{"id":"38277760994099108","name":"RAZAO_SOCIAL","staticId":"C38277760994099108","heading":{"heading":"Raz\u00E3o Social","alignment":"start"},"validation":{"isRequired":true}},{"id":"38277859719099109","name":"NOME","staticId":"C38277859719099109","heading":{"heading":"Nome do Posto","alignment":"start"}},{"id":"38278524423099116","name":"DISTRIBUIDORA","staticId":"C38278524423099116","heading":{"heading":"Distribuidora","alignment":"start"}},{"id":"38278666076099117","name":"DISTRIBUIDORA_DATA_INICIO","staticId":"C38278666076099117","dataType":"DATE","heading":{"heading":"In\u00EDcio da Distribuidora","alignment":"start"},"appearance":{"dateFormatMask":"DS","formatMask":"DS","formatExample":"2\u002F11\u002F2026"},"filter":{"dataType":"DATE"}},{"id":"38279636336099127","name":"PARTICIAPCAO_DITRIBUIDORA_PERC","staticId":"C38279636336099127","dataType":"NUMBER","heading":{"heading":"Volume Recebido da Distribuidora (\u0025)","alignment":"end"},"layout":{"columnAlignment":"end","noStretch":false},"appearance":{"columnCssClasses":"ig","formatExample":"2,54"},"filter":{"dataType":"NUMBER","hasLov":false}},{"id":"38279782394099128","name":"STATUS_RECEBIMENTO","staticId":"C38279782394099128","heading":{"heading":"Status do Recebimento da Distribuidora","alignment":"start"},"layout":{"noStretch":false},"appearance":{"columnCssClasses":"ig"}},{"id":"38279179916099122","name":"POSTO_TIPO","staticId":"C38279179916099122","heading":{"heading":"Tipo de Posto","alignment":"start"},"validation":{"isRequired":true}},{"id":"38302232574501188","name":"INTERDITADO","staticId":"C38302232574501188","isHidden":true},{"id":"38279090021099121","name":"SITUACAO_ATUAL","staticId":"C38279090021099121","isHidden":true},{"id":"26535246242731565","name":"SITUACAO_CORRIGIDA","staticId":"C26535246242731565","heading":{"heading":"Situa\u00E7\u00E3o","alignment":"start"}},{"id":"38277943993099110","name":"ENDERECO","staticId":"C38277943993099110","heading":{"heading":"Endere\u00E7o","alignment":"start"}},{"id":"38278070984099111","name":"COMPLEMENTO","staticId":"C38278070984099111","heading":{"heading":"Complemento","alignment":"start"},"filter":{"hasLov":false},"features":{"sort":false,"controlBreak":false,"groupBy":false,"aggregate":false}},{"id":"38278169444099112","name":"BAIRRO","staticId":"C38278169444099112","heading":{"heading":"Bairro","alignment":"start"}},{"id":"38278482277099115","name":"CEP","staticId":"C38278482277099115","dataType":"NUMBER","heading":{"heading":"CEP","alignment":"end"},"layout":{"columnAlignment":"end"},"appearance":{"formatExample":"2,54"},"filter":{"dataType":"NUMBER","hasLov":false}},{"id":"38278284482099113","name":"MUNICIPIO","staticId":"C38278284482099113","heading":{"heading":"Cidade","alignment":"start"}},{"id":"38278322471099114","name":"UF","staticId":"C38278322471099114","heading":{"heading":"UF","alignment":"start"},"validation":{"isRequired":true}},{"id":"38279466771099125","name":"LATITUDE","staticId":"C38279466771099125","isHidden":true},{"id":"38279600348099126","name":"LONGITUDE","staticId":"C38279600348099126","isHidden":true},{"id":"38277590133099106","name":"AUTORIZACAO","staticId":"C38277590133099106","heading":{"heading":"Autoriza\u00E7\u00E3o","alignment":"start"}},{"id":"38278969798099120","name":"NUMERO_DESPACHO","staticId":"C38278969798099120","heading":{"heading":"N\u00FAmero Despacho","alignment":"start"}},{"id":"38279358472099124","name":"PORTARIA_RESOLUCAO","staticId":"C38279358472099124","heading":{"heading":"Portaria\u002FResolu\u00E7\u00E3o","alignment":"start"}},{"id":"38279308665099123","name":"N_PROCESSO","staticId":"C38279308665099123","heading":{"heading":"N\u00FAmero do Processo","alignment":"start"}},{"id":"38278766163099118","name":"DOU_DATA_ENVIO","staticId":"C38278766163099118","dataType":"DATE","heading":{"heading":"Data de Envio ao DOU","alignment":"start"},"appearance":{"dateFormatMask":"DS","formatMask":"DS","formatExample":"2\u002F11\u002F2026"},"filter":{"dataType":"DATE"}},{"id":"38278897752099119","name":"DOU_DATA_PUBLICACAO","staticId":"C38278897752099119","dataType":"DATE","heading":{"heading":"Data de Publica\u00E7\u00E3o no DOU","alignment":"start"},"appearance":{"dateFormatMask":"DS","formatMask":"DS","formatExample":"2\u002F11\u002F2026"},"filter":{"dataType":"DATE"}},{"id":"38279889676099129","name":"FISCALIZACOES_TOTAL","staticId":"C38279889676099129","dataType":"NUMBER","heading":{"heading":"Fiscaliza\u00E7\u00F5es no posto","alignment":"end"},"layout":{"columnAlignment":"end"},"appearance":{"formatExample":"2,54"},"filter":{"dataType":"NUMBER","hasLov":false}},{"id":"38279945828099130","name":"FISCALIZACOES_SEM_INFRACAO","staticId":"C38279945828099130","dataType":"NUMBER","heading":{"heading":"Fiscaliza\u00E7\u00F5es sem registro de infra\u00E7\u00E3o","alignment":"end"},"layout":{"columnAlignment":"end"},"appearance":{"formatExample":"2,54"},"filter":{"dataType":"NUMBER","hasLov":false}},{"id":"38280046066099131","name":"FISCALIZACOES_COM_INFRACAO","staticId":"C38280046066099131","dataType":"NUMBER","heading":{"heading":"Fiscaliza\u00E7\u00F5es com registro de infra\u00E7\u00E3o","alignment":"end"},"layout":{"columnAlignment":"end"},"appearance":{"formatExample":"2,54"},"filter":{"dataType":"NUMBER","hasLov":false}},{"id":"38280137211099132","name":"INFRACAO_QUALIDADE","staticId":"C38280137211099132","dataType":"NUMBER","heading":{"heading":"Infra\u00E7\u00F5es de Qualidade registradas","alignment":"end"},"layout":{"columnAlignment":"end"},"appearance":{"formatExample":"2,54"},"filter":{"dataType":"NUMBER","hasLov":false}},{"id":"38280283774099133","name":"INFRACAO_QUANTIDADE","staticId":"C38280283774099133","dataType":"NUMBER","heading":{"heading":"Infra\u00E7\u00F5es de Quantidade registradas","alignment":"end"},"layout":{"columnAlignment":"end"},"appearance":{"formatExample":"2,54"},"filter":{"dataType":"NUMBER","hasLov":false}},{"id":"38280340011099134","name":"INFRACAO_TOTAL","staticId":"C38280340011099134","dataType":"NUMBER","heading":{"heading":"Total de Infra\u00E7\u00F5es registradas","alignment":"end"},"layout":{"columnAlignment":"end"},"appearance":{"formatExample":"2,54"},"filter":{"dataType":"NUMBER","hasLov":false}},{"id":"38301963897501185","name":"AMOSTRAS_TOTAL","staticId":"C38301963897501185","dataType":"NUMBER","heading":{"heading":"Amostras coletadas","alignment":"end"},"layout":{"columnAlignment":"end"},"appearance":{"formatExample":"2,54"},"filter":{"dataType":"NUMBER","hasLov":false}},{"id":"38302076351501186","name":"AMOSTRAS_NC","staticId":"C38302076351501186","dataType":"NUMBER","heading":{"heading":"Amostras com resultado n\u00E3o conforme","alignment":"end"},"layout":{"columnAlignment":"end"},"appearance":{"formatExample":"2,54"},"filter":{"dataType":"NUMBER","hasLov":false}},{"id":"38302123476501187","name":"AMOSTRAS_CONFORME","staticId":"C38302123476501187","dataType":"NUMBER","heading":{"heading":"Amostras com resultado conforme","alignment":"end"},"layout":{"columnAlignment":"end"},"appearance":{"formatExample":"2,54"},"filter":{"dataType":"NUMBER","hasLov":false}},{"id":"38302416878501190","name":"ORDEM","staticId":"C38302416878501190","dataType":"NUMBER","isHidden":true},{"id":"41659964901519325","name":"LAT_NUM","staticId":"C41659964901519325","dataType":"NUMBER","isHidden":true},{"id":"41660053719519326","name":"LON_NUM","staticId":"C41660053719519326","dataType":"NUMBER","isHidden":true},{"id":"41660151642519327","name":"NOTA","staticId":"C41660151642519327","dataType":"NUMBER","heading":{"heading":"Nota","alignment":"end"},"layout":{"columnAlignment":"end"},"appearance":{"formatExample":"2,54"},"filter":{"dataType":"NUMBER","hasLov":false}},{"id":"22249893381107590","name":"MOTIVO_INTERDICAO","staticId":"C22249893381107590","heading":{"heading":"Motivo da Interdi\u00E7\u00E3o","alignment":"start"}},{"id":"22250043494107591","name":"TEMPO_AUTORIZACAO_ANOS","staticId":"C22250043494107591","dataType":"NUMBER","heading":{"heading":"Tempo de Autorizado (anos)","alignment":"end"},"layout":{"columnAlignment":"end"},"appearance":{"formatExample":"2,54"},"filter":{"dataType":"NUMBER","hasLov":false}}],"ajaxColumns":"MzgyNzc0MTU2NDcwOTkxMDU6NDE2NjAyMzExMjE1MTkzMjg6MzgyNzc3MDMwNjAw.,OTkxMDc6MzgyNzc3NjA5OTQwOTkxMDg6MzgyNzc4NTk3MTkwOTkxMDk6MzgyNzg1.,MjQ0MjMwOTkxMTY6MzgyNzg2NjYwNzYwOTkxMTc6MzgyNzk2MzYzMzYwOTkxMjc6.,MzgyNzk3ODIzOTQwOTkxMjg6MzgyNzkxNzk5MTYwOTkxMjI6MzgzMDIyMzI1NzQ1.,MDExODg6MzgyNzkwOTAwMjEwOTkxMjE6MjY1MzUyNDYyNDI3MzE1NjU6MzgyNzc5.,NDM5OTMwOTkxMTA6MzgyNzgwNzA5ODQwOTkxMTE6MzgyNzgxNjk0NDQwOTkxMTI6.,MzgyNzg0ODIyNzcwOTkxMTU6MzgyNzgyODQ0ODIwOTkxMTM6MzgyNzgzMjI0NzEw.,OTkxMTQ6MzgyNzk0NjY3NzEwOTkxMjU6MzgyNzk2MDAzNDgwOTkxMjY6MzgyNzc1.,OTAxMzMwOTkxMDY6MzgyNzg5Njk3OTgwOTkxMjA6MzgyNzkzNTg0NzIwOTkxMjQ6.,MzgyNzkzMDg2NjUwOTkxMjM6MzgyNzg3NjYxNjMwOTkxMTg6MzgyNzg4OTc3NTIw.,OTkxMTk6MzgyNzk4ODk2NzYwOTkxMjk6MzgyNzk5NDU4MjgwOTkxMzA6MzgyODAw.,NDYwNjYwOTkxMzE6MzgyODAxMzcyMTEwOTkxMzI6MzgyODAyODM3NzQwOTkxMzM6.,MzgyODAzNDAwMTEwOTkxMzQ6MzgzMDE5NjM4OTc1MDExODU6MzgzMDIwNzYzNTE1.,MDExODY6MzgzMDIxMjM0NzY1MDExODc6MzgzMDI0MTY4Nzg1MDExOTA6NDE2NTk5.,NjQ5MDE1MTkzMjU6NDE2NjAwNTM3MTk1MTkzMjY6NDE2NjAxNTE2NDI1MTkzMjc6.,MjIyNDk4OTMzODExMDc1OTA6MjIyNTAwNDM0OTQxMDc1OTE\u002Fdg7pHhv7WIWGdgCxol5bxDk37ycRUjJ06-uuDriTNF0ZJwsfqwIHIf47uXDI_iDX9Q8UhougpbpW5TvPLMn7zQ","regionId":"38277306105099103","regionAccTitle":"Postos_Lista","regionStaticId":"R38277306105099103","ajaxIdentifier":"UkVHSU9OIFRZUEV-fjM4Mjc3MzA2MTA1MDk5MTAz\u002FUyYzjr90nQHKnY53Vk36VNU6iRSil2Y7Fjc5yCl8xIVGH9wlmyNA936V69OHSzw2vdgvntMgNslCwVT7HrudTg","pagination":{"type":"set","showTotalRowCount":true},"toolbar":{"reset":false,"save":false},"headingFixedTo":"none","features":{"saveReport":false,"flashback":false,"subscription":false},"views":{"grid":{"features":{"rowSelector":false}},"chart":false}},"savedReports":[{"id":"38307590570502194","isCurrent":true,"rowsPerPage":25,"reportSettingsArea":"expanded","versionNumber":2,"views":{"grid":{"columns":[{"id":"38308231094502197","seq":1,"columnId":"38277415647099105","isFrozen":true},{"id":"42286611182869702","seq":2,"columnId":"41660231121519328","width":79},{"id":"38309943915502203","seq":3,"columnId":"38277703060099107","width":134},{"id":"38310814125502205","seq":4,"columnId":"38277760994099108","width":240},{"id":"38311711212502208","seq":5,"columnId":"38277859719099109","isVisible":false,"width":207},{"id":"42285860198869700","seq":6,"columnId":"41660151642519327","width":56},{"id":"38323470448502240","seq":7,"columnId":"38279179916099122","isVisible":false,"width":192},{"id":"38318035527502226","seq":8,"columnId":"38278524423099116","width":137},{"id":"55295543994738075","seq":9,"columnId":"26535246242731565","width":152},{"id":"38322522241502238","seq":10,"columnId":"38279090021099121","width":125},{"id":"38337878219502278","seq":11,"columnId":"38302232574501188","width":165.98829999999998,"sort":{"order":1}},{"id":"38318919159502228","seq":12,"columnId":"38278666076099117","isVisible":false,"width":146},{"id":"38327976768502252","seq":13,"columnId":"38279636336099127","isVisible":false,"width":252},{"id":"38328855760502255","seq":14,"columnId":"38279782394099128","width":200},{"id":"38314431712502216","seq":15,"columnId":"38278169444099112","width":151},{"id":"38317191087502224","seq":16,"columnId":"38278482277099115","width":90},{"id":"38312683268502211","seq":17,"columnId":"38277943993099110","width":277},{"id":"38313515517502214","seq":18,"columnId":"38278070984099111","isVisible":false,"width":144},{"id":"38315346636502218","seq":19,"columnId":"38278284482099113","isVisible":false,"width":120},{"id":"38316213661502221","seq":20,"columnId":"38278322471099114","isVisible":false},{"id":"38326167742502247","seq":21,"columnId":"38279466771099125"},{"id":"38327013046502250","seq":22,"columnId":"38279600348099126"},{"id":"38309197738502200","seq":23,"columnId":"38277590133099106","width":116},{"id":"38321707469502235","seq":24,"columnId":"38278969798099120","isVisible":false,"width":145},{"id":"38324381980502243","seq":25,"columnId":"38279308665099123","isVisible":false,"width":167},{"id":"38325254851502245","seq":26,"columnId":"38279358472099124","isVisible":false,"width":224},{"id":"38319854225502231","seq":27,"columnId":"38278766163099118","isVisible":false,"width":159},{"id":"38320721243502233","seq":28,"columnId":"38278897752099119","isVisible":false,"width":175},{"id":"38329794419502257","seq":29,"columnId":"38279889676099129","isVisible":false,"width":143},{"id":"38330648140502259","seq":30,"columnId":"38279945828099130","isVisible":false,"width":241},{"id":"38331520304502261","seq":31,"columnId":"38280046066099131","isVisible":false,"width":224},{"id":"38333317801502266","seq":32,"columnId":"38280283774099133","width":123},{"id":"38332499793502264","seq":33,"columnId":"38280137211099132","width":111},{"id":"38334220356502269","seq":34,"columnId":"38280340011099134","isVisible":false,"width":179},{"id":"38335128649502271","seq":35,"columnId":"38301963897501185","isVisible":false,"width":132},{"id":"38336023476502273","seq":36,"columnId":"38302076351501186","width":126},{"id":"38339619460502283","seq":37,"columnId":"38302416878501190"},{"id":"42284073187869695","seq":38,"columnId":"41659964901519325"},{"id":"42284981563869699","seq":39,"columnId":"41660053719519326"},{"id":"38337006488502276","seq":40,"columnId":"38302123476501187","isVisible":false,"width":235},{"id":"26089123937567173","seq":41,"columnId":"22249893381107590","isVisible":false,"width":104},{"id":"26090011008567178","seq":42,"columnId":"22250043494107591","isVisible":false,"width":103}]}}}],"data":gIg38277306105099103data});})();
+(function(){apex.jQuery("#B38343648292548139").click( event => { window.history.go(-1); });})();
+} catch(e) {apex.debug.error(e)};
+apex.item.waitForDelayLoadItems().done(function() {
+try {
+apex.theme42.initializePage.noSideCol();
+
+apex.page.warnOnUnsavedChanges();
+} finally {
+apex.event.trigger(apex.gPageContext$,'apexreadyend');
+};
+});
+});
+});apex.pwa.init( { serviceWorkerPath:'\u002Fordsdw\u002Fr\u002Fsfi_apex\u002Fanpcomvcpostos\u002Fsw.js?v=24.2.13-6129336796412\u0026lang=pt-br' } );
+</script>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "ANP Postos",
+        "description": "Postos de combustível da ANP (ANP Com Vc - Postos) no mapa, com aviso de postos irregulares.",
+        "data": {
+          "cities": "Cidades",
+          "max_nota": "Nota máxima considerada irregular",
+          "notify_services": "Serviços de notificação (opcional)",
+          "scan_interval_hours": "Intervalo de atualização",
+          "fetch_details": "Buscar fiscalizações e amostras dos irregulares"
+        },
+        "data_description": {
+          "cities": "Cidades cujos postos autorizados pela ANP vão para o mapa.",
+          "max_nota": "A ANP dá nota de 0 a 5 com base em infrações e amostras não conformes. Postos com nota até este valor, interditados ou fora de operação são irregulares e geram aviso.",
+          "notify_services": "Além da notificação persistente, envia o aviso por estes serviços (ex.: notify.mobile_app_iphone).",
+          "scan_interval_hours": "A ANP atualiza os dados poucas vezes por semana.",
+          "fetch_details": "Histórico de fiscalizações, irregularidades, amostras, produtos e origem do combustível."
+        }
+      }
+    },
+    "error": {
+      "no_cities": "Escolha ao menos uma cidade."
+    },
+    "abort": {
+      "cannot_connect": "Não foi possível acessar o site da ANP.",
+      "already_configured": "Já configurado. Use Configurar para trocar as cidades.",
+      "single_instance_allowed": "Já configurado. Use Configurar para trocar as cidades."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "ANP Postos",
+        "data": {
+          "cities": "Cidades",
+          "max_nota": "Nota máxima considerada irregular",
+          "notify_services": "Serviços de notificação (opcional)",
+          "scan_interval_hours": "Intervalo de atualização",
+          "fetch_details": "Buscar fiscalizações e amostras dos irregulares"
+        },
+        "data_description": {
+          "cities": "Cidades cujos postos autorizados pela ANP vão para o mapa.",
+          "max_nota": "A ANP dá nota de 0 a 5 com base em infrações e amostras não conformes. Postos com nota até este valor, interditados ou fora de operação são irregulares e geram aviso.",
+          "notify_services": "Além da notificação persistente, envia o aviso por estes serviços (ex.: notify.mobile_app_iphone).",
+          "scan_interval_hours": "A ANP atualiza os dados poucas vezes por semana.",
+          "fetch_details": "Histórico de fiscalizações, irregularidades, amostras, produtos e origem do combustível."
+        }
+      }
+    },
+    "error": {
+      "no_cities": "Escolha ao menos uma cidade."
+    },
+    "abort": {
+      "cannot_connect": "Não foi possível acessar o site da ANP."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "postos": {
+        "name": "Postos"
+      },
+      "irregulares": {
+        "name": "Postos irregulares"
+      },
+      "nota_media": {
+        "name": "Nota média"
+      },
+      "interditados": {
+        "name": "Postos interditados"
+      },
+      "infracoes": {
+        "name": "Infrações"
+      },
+      "amostras_nao_conformes": {
+        "name": "Amostras não conformes"
+      }
+    }
+  }
+}

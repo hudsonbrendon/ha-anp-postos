@@ -1,0 +1,81 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "ANP Postos",
+        "description": "ANP fuel stations (ANP Com Vc - Postos) on the map, with irregular-station alerts.",
+        "data": {
+          "cities": "Cities",
+          "max_nota": "Highest score considered irregular",
+          "notify_services": "Notify services (optional)",
+          "scan_interval_hours": "Update interval",
+          "fetch_details": "Fetch inspections and samples for irregular stations"
+        },
+        "data_description": {
+          "cities": "Cities whose ANP-authorized stations go on the map.",
+          "max_nota": "ANP scores 0-5 based on violations and non-conforming samples. Stations at or below this score, interdicted or not operating are irregular and trigger a notification.",
+          "notify_services": "Besides the persistent notification, also send through these services (e.g. notify.mobile_app_iphone).",
+          "scan_interval_hours": "ANP refreshes data a few times per week.",
+          "fetch_details": "Inspection history, violations, samples, products and fuel origin."
+        }
+      }
+    },
+    "error": {
+      "no_cities": "Pick at least one city."
+    },
+    "abort": {
+      "cannot_connect": "Could not reach the ANP website.",
+      "already_configured": "Already configured. Use Configure to change cities.",
+      "single_instance_allowed": "Already configured. Use Configure to change cities."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "ANP Postos",
+        "data": {
+          "cities": "Cities",
+          "max_nota": "Highest score considered irregular",
+          "notify_services": "Notify services (optional)",
+          "scan_interval_hours": "Update interval",
+          "fetch_details": "Fetch inspections and samples for irregular stations"
+        },
+        "data_description": {
+          "cities": "Cities whose ANP-authorized stations go on the map.",
+          "max_nota": "ANP scores 0-5 based on violations and non-conforming samples. Stations at or below this score, interdicted or not operating are irregular and trigger a notification.",
+          "notify_services": "Besides the persistent notification, also send through these services (e.g. notify.mobile_app_iphone).",
+          "scan_interval_hours": "ANP refreshes data a few times per week.",
+          "fetch_details": "Inspection history, violations, samples, products and fuel origin."
+        }
+      }
+    },
+    "error": {
+      "no_cities": "Pick at least one city."
+    },
+    "abort": {
+      "cannot_connect": "Could not reach the ANP website."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "postos": {
+        "name": "Stations"
+      },
+      "irregulares": {
+        "name": "Irregular stations"
+      },
+      "nota_media": {
+        "name": "Average score"
+      },
+      "interditados": {
+        "name": "Interdicted stations"
+      },
+      "infracoes": {
+        "name": "Violations"
+      },
+      "amostras_nao_conformes": {
+        "name": "Non-conforming samples"
+      }
+    }
+  }
+}
