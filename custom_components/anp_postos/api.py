@@ -45,6 +45,10 @@ class AnpConnectionError(AnpError):
     """Falha de rede/timeout."""
 
 
+class AnpRateLimitError(AnpError):
+    """Cloudflare da ANP devolveu 429 (muitas requisições do mesmo IP)."""
+
+
 # ---------------------------------------------------------------- parsing puro
 
 
@@ -343,6 +347,8 @@ class AnpPostosClient:
             async with self._session.request(
                 method, url, timeout=TIMEOUT, headers={**HEADERS, **kwargs.pop("headers", {})}, **kwargs
             ) as resp:
+                if resp.status == 429:
+                    raise AnpRateLimitError("ANP limitou as requisições (HTTP 429)")
                 if resp.status >= 400:
                     raise AnpError(f"HTTP {resp.status} em {url.split('?')[0]}")
                 return await resp.text()

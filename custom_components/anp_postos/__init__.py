@@ -10,6 +10,7 @@ from homeassistant.core import HomeAssistant
 from homeassistant.helpers import config_validation as cv, device_registry as dr
 from homeassistant.helpers.typing import ConfigType
 
+from .arrival import async_setup_arrival
 from .const import DOMAIN, STATIC_URL
 from .coordinator import AnpPostosCoordinator
 from .data import AnpPostosConfigEntry, AnpPostosData
@@ -37,6 +38,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: AnpPostosConfigEntry) ->
         if not any(i[1] in coordinator.data for i in device.identifiers if i[0] == DOMAIN):
             devices.async_remove_device(device.id)
     await hass.config_entries.async_forward_entry_setups(entry, PLATFORMS)
+    async_setup_arrival(hass, entry)
     entry.async_on_unload(entry.add_update_listener(_async_reload_entry))
     return True
 

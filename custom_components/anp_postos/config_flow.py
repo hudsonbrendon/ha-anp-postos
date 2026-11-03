@@ -9,6 +9,8 @@ from homeassistant.config_entries import ConfigEntry, ConfigFlow, ConfigFlowResu
 from homeassistant.core import callback
 from homeassistant.helpers.selector import (
     BooleanSelector,
+    EntitySelector,
+    EntitySelectorConfig,
     NumberSelector,
     NumberSelectorConfig,
     NumberSelectorMode,
@@ -25,18 +27,28 @@ from .const import (
     CONF_DETAILS,
     CONF_MAX_NOTA,
     CONF_NOTIFY,
+    CONF_RADIUS,
     CONF_SCAN_HOURS,
+    CONF_TRACKERS,
     DEFAULT_DETAILS,
     DEFAULT_MAX_NOTA,
+    DEFAULT_RADIUS,
     DEFAULT_SCAN_HOURS,
     DOMAIN,
 )
 
 
+_CITY_CACHE: dict[str, str] = {}
+
+
 async def _fetch_cities() -> dict[str, str]:
-    # Sessão curta e isolada: o cookie APEX não pode vazar para a sessão do HA.
-    async with aiohttp.ClientSession(cookie_jar=aiohttp.CookieJar()) as session:
-        return await AnpPostosClient(session).async_get_cities()
+    # ponytail: cache em memória até reiniciar o HA; a lista quase não muda e a
+    # ANP responde 429 para IP que pede demais.
+    if not _CITY_CACHE:
+        # Sessão curta e isolada: o cookie APEX não pode vazar para a sessão do HA.
+        async with aiohttp.ClientSession(cookie_jar=aiohttp.CookieJar()) as session:
+            _CITY_CACHE.update(await AnpPostosClient(session).async_get_cities())
+    return _CITY_CACHE
 
 
 def _schema(hass, cities: dict[str, str], current: dict[str, Any]) -> vol.Schema:
@@ -56,6 +68,14 @@ def _schema(hass, cities: dict[str, str], current: dict[str, Any]) -> vol.Schema
             vol.Optional(CONF_NOTIFY, default=current.get(CONF_NOTIFY, [])): SelectSelector(
                 SelectSelectorConfig(options=notify, multiple=True, custom_value=True)
             ),
+            vol.Optional(CONF_TRACKERS, default=current.get(CONF_TRACKERS, [])): EntitySelector(
+                EntitySelectorConfig(domain="device_tracker", integration="mobile_app", multiple=True)
+            ),
+            vol.Required(
+                CONF_RADIUS, default=current.get(CONF_RADIUS, DEFAULT_RADIUS)
+            ): NumberSelector(
+                NumberSelectorConfig(min=30, max=500, step=10, unit_of_measurement="m")
+            ),
             vol.Required(
                 CONF_SCAN_HOURS, default=current.get(CONF_SCAN_HOURS, DEFAULT_SCAN_HOURS)
             ): NumberSelector(NumberSelectorConfig(min=1, max=168, step=1, unit_of_measurement="h")),
@@ -72,6 +92,7 @@ def _clean(user_input: dict[str, Any], cities: dict[str, str]) -> dict[str, Any]
         CONF_CITIES: {c: cities[c] for c in user_input[CONF_CITIES] if c in cities},
         CONF_MAX_NOTA: int(user_input[CONF_MAX_NOTA]),
         CONF_SCAN_HOURS: int(user_input[CONF_SCAN_HOURS]),
+        CONF_RADIUS: int(user_input[CONF_RADIUS]),
     }
 
 
@@ -119,7 +140,11 @@ class AnpPostosOptionsFlow(OptionsFlow):
             try:
                 self._cities = await _fetch_cities()
             except AnpError:
-                return self.async_abort(reason="cannot_connect")
+                # ANP fora/429: ainda dá para mexer no resto, com as cidades atuais.
+                self._cities = dict(
+                    self.config_entry.options.get(CONF_CITIES)
+                    or self.config_entry.data.get(CONF_CITIES, {})
+                )
         errors: dict[str, str] = {}
         if user_input is not None:
             if not user_input.get(CONF_CITIES):

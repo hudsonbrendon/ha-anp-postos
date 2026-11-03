@@ -9,14 +9,18 @@
           "max_nota": "Highest score considered irregular",
           "notify_services": "Notify services (optional)",
           "scan_interval_hours": "Update interval",
-          "fetch_details": "Fetch inspections and samples for irregular stations"
+          "fetch_details": "Fetch inspections and samples for irregular stations",
+          "arrival_trackers": "Phones for the arrival alert",
+          "arrival_radius_m": "Distance that counts as \"at the station\""
         },
         "data_description": {
           "cities": "Cities whose ANP-authorized stations go on the map.",
           "max_nota": "ANP scores 0-5 based on violations and non-conforming samples. Stations at or below this score, interdicted or not operating are irregular and trigger a notification.",
           "notify_services": "Besides the persistent notification, also send through these services (e.g. notify.mobile_app_iphone).",
           "scan_interval_hours": "ANP refreshes data a few times per week.",
-          "fetch_details": "Inspection history, violations, samples, products and fuel origin."
+          "fetch_details": "Inspection history, violations, samples, products and fuel origin.",
+          "arrival_trackers": "When one of these phones (Home Assistant app) arrives at a station in the cities above, it gets a push saying whether to fuel there, with score and violations.",
+          "arrival_radius_m": "ANP coordinates are off by a few dozen meters; 100–150 m works well."
         }
       }
     },
@@ -38,14 +42,18 @@
           "max_nota": "Highest score considered irregular",
           "notify_services": "Notify services (optional)",
           "scan_interval_hours": "Update interval",
-          "fetch_details": "Fetch inspections and samples for irregular stations"
+          "fetch_details": "Fetch inspections and samples for irregular stations",
+          "arrival_trackers": "Phones for the arrival alert",
+          "arrival_radius_m": "Distance that counts as \"at the station\""
         },
         "data_description": {
           "cities": "Cities whose ANP-authorized stations go on the map.",
           "max_nota": "ANP scores 0-5 based on violations and non-conforming samples. Stations at or below this score, interdicted or not operating are irregular and trigger a notification.",
           "notify_services": "Besides the persistent notification, also send through these services (e.g. notify.mobile_app_iphone).",
           "scan_interval_hours": "ANP refreshes data a few times per week.",
-          "fetch_details": "Inspection history, violations, samples, products and fuel origin."
+          "fetch_details": "Inspection history, violations, samples, products and fuel origin.",
+          "arrival_trackers": "When one of these phones (Home Assistant app) arrives at a station in the cities above, it gets a push saying whether to fuel there, with score and violations.",
+          "arrival_radius_m": "ANP coordinates are off by a few dozen meters; 100–150 m works well."
         }
       }
     },

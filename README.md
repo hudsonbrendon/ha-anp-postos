@@ -35,7 +35,22 @@ Irregular = nota até o limite escolhido (padrão 2), interditado ou fora de ope
 - envia pelos serviços `notify.*` escolhidos (ex.: app do celular, com clique abrindo o mapa);
 - dispara o evento `anp_postos_posto_irregular` com todos os dados, para automações.
 
-O aviso não se repete enquanto o posto continuar igual.
+O aviso não se repete enquanto o posto continuar igual. Se a ANP estiver fora do ar ou limitar as requisições (HTTP 429), a integração usa o último dado salvo.
+
+## Aviso ao chegar no posto
+
+Escolha nas opções os celulares (app do Home Assistant) que devem receber o aviso. Quando um deles chega a até 120 m (ajustável) de um posto das cidades monitoradas, só aquele celular recebe um push:
+
+| Veredito | Quando |
+|---|---|
+| ✅ **Pode abastecer** | nota 4–5 sem infrações nos últimos 5 anos |
+| ⚠️ **Abasteça com atenção** | nota logo acima do limite, ou nota < 5 com infração registrada |
+| ⛔ **Não abasteça aqui** | irregular: nota até o limite, interditado ou fora de operação (push *time-sensitive* no iPhone) |
+| ❔ **Sem nota** | a ANP não calculou nota |
+
+O push traz nota, distribuidora, fiscalizações, infrações, amostras reprovadas, motivo da interdição e as últimas irregularidades; tocar abre o posto no app. Mesmo posto e mesmo celular: no máximo um aviso a cada 3 h. O evento `anp_postos_chegada` (tracker, veredito, distância, CNPJ, posto, nota, entity_id) permite montar automações próprias.
+
+Como o app do iPhone só manda localização a cada ~500 m em segundo plano, quando o celular passa a menos de 700 m de um posto a integração pede uma posição nova ao app (`request_location_update`, no máximo a cada 10 min), para pegar o momento da parada. Para mais precisão, deixe a localização do app em "Sempre" com localização precisa ativada.
 
 ## Instalação
 

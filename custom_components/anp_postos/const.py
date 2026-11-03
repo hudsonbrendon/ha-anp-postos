@@ -14,12 +14,16 @@ CONF_MAX_NOTA = "max_nota"
 CONF_NOTIFY = "notify_services"
 CONF_SCAN_HOURS = "scan_interval_hours"
 CONF_DETAILS = "fetch_details"
+CONF_TRACKERS = "arrival_trackers"
+CONF_RADIUS = "arrival_radius_m"
 
 DEFAULT_MAX_NOTA = 2
 DEFAULT_SCAN_HOURS = 12
 DEFAULT_DETAILS = True
+DEFAULT_RADIUS = 120
 
 EVENT_IRREGULAR = f"{DOMAIN}_posto_irregular"
+EVENT_ARRIVAL = f"{DOMAIN}_chegada"
 STATIC_URL = f"/{DOMAIN}"
 
 # Cores da legenda do mapa do site (Nota 0..5).

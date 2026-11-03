@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import asyncio
 from datetime import date, timedelta
 from typing import TYPE_CHECKING, Any
 
@@ -62,6 +63,8 @@ class AnpPostosCoordinator(DataUpdateCoordinator[dict[str, dict[str, Any]]]):
             hass, 1, f"{DOMAIN}.{entry.entry_id}.notified"
         )
         self._notified: dict[str, int | None] | None = None
+        # Últimos dados bons: sobem no lugar da ANP se ela estiver fora/429 no boot.
+        self._cache: Store[dict[str, Any]] = Store(hass, 1, f"{DOMAIN}.{entry.entry_id}.cache")
 
     @property
     def max_nota(self) -> int:
@@ -79,6 +82,11 @@ class AnpPostosCoordinator(DataUpdateCoordinator[dict[str, dict[str, Any]]]):
                     LOGGER.warning("%s: mantendo dados anteriores (%s)", city_name, err)
                     data[city_id] = self.data[city_id]
                     continue
+                cached = (await self._cache.async_load() or {}).get(city_id)
+                if cached:
+                    LOGGER.warning("%s: usando cache local (%s)", city_name, err)
+                    data[city_id] = cached
+                    continue
                 raise UpdateFailed(f"{city_name}: {err}") from err
             previous = (self.data or {}).get(city_id, {}).get("stations", {})
             for cod, station in stations.items():
@@ -86,6 +94,7 @@ class AnpPostosCoordinator(DataUpdateCoordinator[dict[str, dict[str, Any]]]):
                 if "detalhes" in previous.get(cod, {}):
                     station["detalhes"] = previous[cod]["detalhes"]
             data[city_id] = {"name": city_name, "stations": stations}
+        self._cache.async_delay_save(lambda: _jsonable_data(data), 60)
         if entry_option(self.config_entry, CONF_DETAILS, DEFAULT_DETAILS):
             self.config_entry.async_create_background_task(
                 self.hass, self._async_enrich(data), f"{DOMAIN} detalhes"
@@ -104,6 +113,7 @@ class AnpPostosCoordinator(DataUpdateCoordinator[dict[str, dict[str, Any]]]):
                 station["irregular"] = is_irregular(station, self.max_nota)
                 station["cidade_id"] = city_id
                 if details and station["irregular"]:
+                    await asyncio.sleep(1)  # gentileza com o Cloudflare da ANP (429)
                     try:
                         station["detalhes"] = await client.async_get_details(station)
                     except AnpError as err:
@@ -200,4 +210,14 @@ def _jsonable(station: dict[str, Any]) -> dict[str, Any]:
         k: v.isoformat() if isinstance(v, date) else v
         for k, v in station.items()
         if not k.startswith("_")
+    }
+
+
+def _jsonable_data(data: dict[str, dict[str, Any]]) -> dict[str, Any]:
+    return {
+        city_id: {
+            "name": city["name"],
+            "stations": {cod: _jsonable(s) for cod, s in city["stations"].items()},
+        }
+        for city_id, city in data.items()
     }

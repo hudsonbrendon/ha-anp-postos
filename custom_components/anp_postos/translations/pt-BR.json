@@ -9,14 +9,18 @@
           "max_nota": "Nota máxima considerada irregular",
           "notify_services": "Serviços de notificação (opcional)",
           "scan_interval_hours": "Intervalo de atualização",
-          "fetch_details": "Buscar fiscalizações e amostras dos irregulares"
+          "fetch_details": "Buscar fiscalizações e amostras dos irregulares",
+          "arrival_trackers": "Celulares para o aviso de chegada",
+          "arrival_radius_m": "Distância que conta como \"cheguei no posto\""
         },
         "data_description": {
           "cities": "Cidades cujos postos autorizados pela ANP vão para o mapa.",
           "max_nota": "A ANP dá nota de 0 a 5 com base em infrações e amostras não conformes. Postos com nota até este valor, interditados ou fora de operação são irregulares e geram aviso.",
           "notify_services": "Além da notificação persistente, envia o aviso por estes serviços (ex.: notify.mobile_app_iphone).",
           "scan_interval_hours": "A ANP atualiza os dados poucas vezes por semana.",
-          "fetch_details": "Histórico de fiscalizações, irregularidades, amostras, produtos e origem do combustível."
+          "fetch_details": "Histórico de fiscalizações, irregularidades, amostras, produtos e origem do combustível.",
+          "arrival_trackers": "Quando um destes celulares (app do Home Assistant) chega num posto das cidades acima, recebe um push dizendo se pode abastecer, com a nota e as infrações.",
+          "arrival_radius_m": "As coordenadas da ANP têm erro de algumas dezenas de metros; 100–150 m funciona bem."
         }
       }
     },
@@ -38,14 +42,18 @@
           "max_nota": "Nota máxima considerada irregular",
           "notify_services": "Serviços de notificação (opcional)",
           "scan_interval_hours": "Intervalo de atualização",
-          "fetch_details": "Buscar fiscalizações e amostras dos irregulares"
+          "fetch_details": "Buscar fiscalizações e amostras dos irregulares",
+          "arrival_trackers": "Celulares para o aviso de chegada",
+          "arrival_radius_m": "Distância que conta como \"cheguei no posto\""
         },
         "data_description": {
           "cities": "Cidades cujos postos autorizados pela ANP vão para o mapa.",
           "max_nota": "A ANP dá nota de 0 a 5 com base em infrações e amostras não conformes. Postos com nota até este valor, interditados ou fora de operação são irregulares e geram aviso.",
           "notify_services": "Além da notificação persistente, envia o aviso por estes serviços (ex.: notify.mobile_app_iphone).",
           "scan_interval_hours": "A ANP atualiza os dados poucas vezes por semana.",
-          "fetch_details": "Histórico de fiscalizações, irregularidades, amostras, produtos e origem do combustível."
+          "fetch_details": "Histórico de fiscalizações, irregularidades, amostras, produtos e origem do combustível.",
+          "arrival_trackers": "Quando um destes celulares (app do Home Assistant) chega num posto das cidades acima, recebe um push dizendo se pode abastecer, com a nota e as infrações.",
+          "arrival_radius_m": "As coordenadas da ANP têm erro de algumas dezenas de metros; 100–150 m funciona bem."
         }
       }
     },
