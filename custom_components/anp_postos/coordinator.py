@@ -189,7 +189,7 @@ def irregular_message(station: dict[str, Any]) -> tuple[str, str]:
         f"**{station['razao_social']}** — CNPJ {station['cnpj_formatado']}",
         f"{station['endereco']}, {station['bairro']} — {station['municipio']}/{station['uf']}",
         f"Nota ANP: **{station['nota']}** / 5 · Distribuidora: {station['distribuidora']}",
-        f"Fiscalizações: {station['fiscalizacoes']} ({station['fiscalizacoes_com_infracao']} com infração)"
+        f"Fiscalizações: {station['fiscalizacoes']} ({station['fiscalizacoes_com_infracao']} com infração)"  # noqa: ISC004
         f" · Infrações: {station['infracoes']} (qualidade {station['infracoes_qualidade']},"
         f" quantidade {station['infracoes_quantidade']})"
         f" · Amostras não conformes: {station['amostras_nao_conformes']}/{station['amostras']}",

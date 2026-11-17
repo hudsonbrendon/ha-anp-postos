@@ -1,6 +1,17 @@
-<p align="center"><img src="logo.png" alt="ANP Postos" height="120"></p>
+<p align="center">
+  <img src="custom_components/anp_postos/brand/logo@2x.png" alt="ANP Postos" height="128">
+</p>
 
 # ANP Postos para Home Assistant
+
+[![Tests](https://github.com/hudsonbrendon/ha-anp-postos/actions/workflows/tests.yml/badge.svg)](https://github.com/hudsonbrendon/ha-anp-postos/actions/workflows/tests.yml)
+[![Hassfest](https://github.com/hudsonbrendon/ha-anp-postos/actions/workflows/hassfest.yml/badge.svg)](https://github.com/hudsonbrendon/ha-anp-postos/actions/workflows/hassfest.yml)
+[![HACS](https://github.com/hudsonbrendon/ha-anp-postos/actions/workflows/validate.yml/badge.svg)](https://github.com/hudsonbrendon/ha-anp-postos/actions/workflows/validate.yml)
+[![Release](https://img.shields.io/github/v/release/hudsonbrendon/ha-anp-postos?sort=semver)](https://github.com/hudsonbrendon/ha-anp-postos/releases)
+[![Downloads](https://img.shields.io/github/downloads/hudsonbrendon/ha-anp-postos/total)](https://github.com/hudsonbrendon/ha-anp-postos/releases)
+[![HACS Custom](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://hacs.xyz/)
+[![Home Assistant](https://img.shields.io/badge/Home%20Assistant-2025.1.0%2B-18BCF2?logo=homeassistant&logoColor=white)](https://www.home-assistant.io/)
+[![License](https://img.shields.io/github/license/hudsonbrendon/ha-anp-postos)](LICENSE)
 
 Coloca no mapa do Home Assistant os postos de combustível autorizados pela ANP nas cidades que você escolher, com a **nota da ANP (0 a 5)**, fiscalizações, infrações, amostras de combustível e interdições, e **avisa quando um posto fica irregular**.
 
@@ -53,6 +64,9 @@ O push traz nota, distribuidora, fiscalizações, infrações, amostras reprovad
 Como o app do iPhone só manda localização a cada ~500 m em segundo plano, quando o celular passa a menos de 700 m de um posto a integração pede uma posição nova ao app (`request_location_update`, no máximo a cada 10 min), para pegar o momento da parada. Para mais precisão, deixe a localização do app em "Sempre" com localização precisa ativada.
 
 ## Instalação
+
+[![Abrir no HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=hudsonbrendon&repository=ha-anp-postos&category=integration)
+[![Adicionar integração](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=anp_postos)
 
 HACS → Repositórios personalizados → `https://github.com/hudsonbrendon/ha-anp-postos` (Integração) → instalar → reiniciar. Depois **Configurações → Dispositivos e serviços → Adicionar integração → ANP Postos** e escolha as cidades. Para trocar cidades, limite ou notificações: **Configurar** na integração.
 

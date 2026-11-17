@@ -17,11 +17,11 @@ Este módulo não importa Home Assistant (testável isolado).
 
 from __future__ import annotations
 
-from dataclasses import dataclass, field
-from datetime import date, datetime
 import html
 import json
 import re
+from dataclasses import dataclass, field
+from datetime import date, datetime
 from typing import Any
 from urllib.parse import unquote, urljoin
 
@@ -57,7 +57,7 @@ def _unescape_js(text: str) -> str:
 
 
 def _input_value(page: str, element_id: str) -> str | None:
-    tag = re.search(r'<input[^>]*id="%s"[^>]*>' % re.escape(element_id), page)
+    tag = re.search(r'<input[^>]*id="%s"[^>]*>' % re.escape(element_id), page)  # noqa: UP031
     if not tag:
         return None
     value = re.search(r'value="([^"]*)"', tag.group(0))
@@ -112,7 +112,7 @@ def parse_grids(page: str) -> dict[str, dict[str, Any]]:
     (salt/protected/links).
     """
     grids: dict[str, dict[str, Any]] = {}
-    for match in re.finditer(r"var gIg(\d+)data = (\{.*?\n\})\s*;", page, re.S):
+    for match in re.finditer(r"var gIg(\d+)data = (\{.*?\n\})\s*;", page, re.DOTALL):
         region = match.group(1)
         data = json.loads(match.group(2))
         cfg_at = page.find(f"#R{region}_ig")
@@ -126,7 +126,7 @@ def parse_grids(page: str) -> dict[str, dict[str, Any]]:
         cfg = page[cfg_at : page.find("\n", cfg_at)]
 
         def _cfg(key: str, src: str = cfg) -> str | None:
-            found = re.search(r'"%s":"([^"]+)"' % key, src)
+            found = re.search(r'"%s":"([^"]+)"' % key, src)  # noqa: UP031
             return _unescape_js(found.group(1)) if found else None
 
         report = re.search(r'"savedReports":\[\{"id":"(\d+)"', cfg)
@@ -153,15 +153,15 @@ def parse_grids(page: str) -> dict[str, dict[str, Any]]:
 
 def parse_table(page: str) -> list[dict[str, str]]:
     """Primeiro relatório clássico (t-Report) como lista de dicts."""
-    table = re.search(r'<table[^>]*class="t-Report-report[^"]*"[^>]*>(.*?)</table>', page, re.S)
+    table = re.search(r'<table[^>]*class="t-Report-report[^"]*"[^>]*>(.*?)</table>', page, re.DOTALL)
     if not table:
         return []
     headers = [html.unescape(h) for h in re.findall(r'<th[^>]*id="([^"]+)"', table.group(1))]
     rows = []
-    for tr in re.findall(r"<tr>(.*?)</tr>", table.group(1), re.S):
+    for tr in re.findall(r"<tr>(.*?)</tr>", table.group(1), re.DOTALL):
         cells = [
             html.unescape(re.sub(r"<[^>]+>", "", c)).strip()
-            for c in re.findall(r"<td[^>]*>(.*?)</td>", tr, re.S)
+            for c in re.findall(r"<td[^>]*>(.*?)</td>", tr, re.DOTALL)
         ]
         if cells:
             rows.append(dict(zip(headers, cells, strict=False)))

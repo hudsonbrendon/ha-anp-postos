@@ -5,7 +5,13 @@ from __future__ import annotations
 from typing import Any
 
 import aiohttp
-from homeassistant.config_entries import ConfigEntry, ConfigFlow, ConfigFlowResult, OptionsFlow
+import voluptuous as vol
+from homeassistant.config_entries import (
+    ConfigEntry,
+    ConfigFlow,
+    ConfigFlowResult,
+    OptionsFlow,
+)
 from homeassistant.core import callback
 from homeassistant.helpers.selector import (
     BooleanSelector,
@@ -19,7 +25,6 @@ from homeassistant.helpers.selector import (
     SelectSelectorConfig,
     SelectSelectorMode,
 )
-import voluptuous as vol
 
 from .api import AnpError, AnpPostosClient
 from .const import (
@@ -36,7 +41,6 @@ from .const import (
     DEFAULT_SCAN_HOURS,
     DOMAIN,
 )
-
 
 _CITY_CACHE: dict[str, str] = {}
 
